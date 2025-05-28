@@ -15,9 +15,9 @@
     referrerpolicy="no-referrer"
   />
 </head>
-<body class="font-sans antialiased text-gray-900 bg-gray-100">
+<body class="font-sans antialiased text-gray-500 bg-black">
   <!-- Navbar -->
-  <nav class="bg-white border-b border-gray-200 px-4 py-2 fixed left-0 right-0 top-0 z-50">
+  <nav class="bg-black border-b border-gray-800 px-4 py-2 fixed left-0 right-0 top-0 z-50">
     <div class="flex flex-wrap justify-between items-center">
       <div class="flex justify-start items-center">
         <button
@@ -29,14 +29,14 @@
           </svg>
         </button>
 
-        <a href="index.html"style="text-shadow: 1px 1px 2px black;" class="text-lg font-bold text-purple-600 uppercase mr-4">Mabiaplay</a>
+        <a href="index.html"style="text-shadow: 1px 1px 2px white;" class="text-lg font-bold text-purple-600 uppercase mr-4">Mabiaplay</a>
 
         <form action="#" method="GET" class="hidden md:block md:pl-2">
           <div class="relative w-64">
             <div class="flex absolute inset-y-0 left-0 items-center pl-3 pointer-events-none">
               <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-5 text-purple-600"><path stroke-linecap="round" stroke-linejoin="round" d="m21 21-5.197-5.197m0 0A7.5 7.5 0 1 0 5.196 5.196a7.5 7.5 0 0 0 10.607 10.607Z" /></svg>
             </div>
-            <input type="text" name="search" id="topbar-search" class="bg-gray-50 border border-gray-200 text-sm rounded-xl focus:ring-purple-500 focus:border-purple-500 block w-full pl-10 p-2" placeholder="Search"/>
+            <input type="text" name="search" id="topbar-search" class="bg-gray-50 border border-gray-200 text-sm rounded-xl focus:ring-purple-500 focus:border-purple-500 block w-full pl-10 p-2" placeholder="Search artists, songs, albums"/>
           </div>
         </form>
       </div>
@@ -46,19 +46,19 @@
         <button
           type="button"
           data-dropdown-toggle="notification-dropdown"
-          class="p-2 text-gray-500 rounded-lg hover:text-purple-900 hover:bg-purple-100 focus:ring-2 focus:ring-purple-300">
+          class="p-2 rounded-lg hover:text-white hover:bg-purple-600 focus:ring-2 focus:ring-purple-300">
           <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6"><path stroke-linecap="round" stroke-linejoin="round" d="M14.857 17.082a23.848 23.848 0 0 0 5.454-1.31A8.967 8.967 0 0 1 18 9.75V9A6 6 0 0 0 6 9v.75a8.967 8.967 0 0 1-2.312 6.022c1.733.64 3.56 1.085 5.455 1.31m5.714 0a24.255 24.255 0 0 1-5.714 0m5.714 0a3 3 0 1 1-5.714 0" /></svg>
         </button>
 
-        <a href="#" type="button" class="flex text-white bg-purple-600 hover:bg-purple-700 focus:ring-4 focus:outline-none focus:ring-purple-300 font-medium rounded-lg text-sm px-2 sm:px-4 py-2 text-center items-center transition-all duration-300"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6"><path stroke-linecap="round" stroke-linejoin="round" d="M12 4.5v15m7.5-7.5h-15" /></svg><span class="hidden md:block">Add New Song</span></a>
+        <a href="#" type="button" class="flex text-white bg-purple-600 hover:bg-purple-700 focus:ring-4 focus:outline-none focus:ring-purple-300 font-medium rounded-lg text-sm px-2 sm:px-4 py-2 text-center items-center transition-all duration-300"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6"><path stroke-linecap="round" stroke-linejoin="round" d="M12 4.5v15m7.5-7.5h-15" /></svg><span class="hidden md:block">Add</span></a>
 
       </div>
     </div>
   </nav>
 
   <!-- Sidebar -->
-  <aside class="fixed top-0 left-0 z-40 w-64 h-screen pt-14 bg-white transition-transform -translate-x-full border-r border-gray-200 md:translate-x-0" aria-label="Sidenav" id="drawer-navigation">
-    <div class="overflow-y-auto py-5 px-3 h-full bg-white">
+  <aside class="fixed top-0 left-0 z-40 w-64 h-screen pt-14 bg-black transition-transform -translate-x-full md:translate-x-0" aria-label="Sidenav" id="drawer-navigation">
+    <div class="overflow-y-auto py-5 px-3 h-full bg-black">
       <ul class="space-y-2">
         <li>
           <a href="index.html" class="flex items-center p-2 transition-all duration-75 text-base font-medium rounded-lg group hover:bg-purple-600 hover:text-white">
@@ -108,14 +108,24 @@
         </li>
 
         <li>
+          <a href="playlist.html" class="flex items-center p-2 transition-all duration-75 text-base font-medium rounded-lg group hover:bg-purple-600 hover:text-white">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6"><path stroke-linecap="round" stroke-linejoin="round" d="M21 8.25c0-2.485-2.099-4.5-4.688-4.5-1.935 0-3.597 1.126-4.312 2.733-.715-1.607-2.377-2.733-4.313-2.733C5.1 3.75 3 5.765 3 8.25c0 7.22 9 12 9 12s9-4.78 9-12Z" /></svg>
+            <span class="ml-3">Favorites</span>
+          </a>
+        </li>
+
+        <li>
+          <a href="playlist.html" class="flex items-center p-2 transition-all duration-75 text-base font-medium rounded-lg group hover:bg-purple-600 hover:text-white">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6"><path stroke-linecap="round" stroke-linejoin="round" d="M3.75 12h16.5m-16.5 3.75h16.5M3.75 19.5h16.5M5.625 4.5h12.75a1.875 1.875 0 0 1 0 3.75H5.625a1.875 1.875 0 0 1 0-3.75Z" /></svg>
+            <span class="ml-3">My Playlists</span>
+          </a>
+        </li>
+
+        <li>
           <a href="settings.html" class="flex items-center p-2 transition-all duration-75 text-base font-medium rounded-lg group hover:bg-purple-600 hover:text-white">
             <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6"><path stroke-linecap="round" stroke-linejoin="round" d="M6 13.5V3.75m0 9.75a1.5 1.5 0 0 1 0 3m0-3a1.5 1.5 0 0 0 0 3m0 3.75V16.5m12-3V3.75m0 9.75a1.5 1.5 0 0 1 0 3m0-3a1.5 1.5 0 0 0 0 3m0 3.75V16.5m-6-9V3.75m0 3.75a1.5 1.5 0 0 1 0 3m0-3a1.5 1.5 0 0 0 0 3m0 9.75V10.5" /></svg>
             <span class="ml-3">Settings</span>
           </a>
-        </li>
-
-        <li class="py-3">
-          <button type="button" class="text-white w-full bg-purple-600 hover:bg-purple-700 focus:outline-none focus:ring-2 focus:ring-purple-300 font-medium rounded-2xl text-sm px-5 py-3 text-center me-2 transition-all duration-75">New Post</button>
         </li>
       </ul>
     </div>
@@ -123,7 +133,7 @@
 
   <!-- Main -->
   <main class="p-4 md:ml-64 h-auto pt-20">
-    <h2 class="text-3xl font-bold mb-4">Music genres</h2>
+    <h2 class="text-2xl font-bold mb-4 text-white">Music Genres</h2>
     <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-4 md:gap-6 mb-8">
       <section class="col-span-1 overflow-hidden relative">
         <div class="absolute top-2 left-2 z-10">
@@ -132,14 +142,14 @@
 
         <div class="flex-shrink-0">
           <a href="detail.html" class="block aspect-[4/3]">
-            <img src="static/01.webp" class="w-full h-48 rounded-lg" loading="lazy">
+            <img src="static/01.webp" class="w-full h-48 rounded-lg border border-gray-600 object-cover transition-transform duration-700 transition-all hover:scale-105" loading="lazy">
           </a>
         </div>
 
-        <div class="truncate mb-1">
-          <a href="detail.html" class="text-sm hover:underline font-bold">Music title</a>
+        <div class="truncate mb-1 mt-2">
+          <a href="detail.html" class="hover:underline font-bold text-white">Music title</a>
+          <p class="text-sm font-bold">Starking</p>
         </div>
-        <p class="text-gray-600 text-sm">Starking</p>
       </section>
 
       <section class="col-span-1 overflow-hidden relative">
@@ -149,14 +159,14 @@
 
         <div class="flex-shrink-0">
           <a href="detail.html" class="block aspect-[4/3]">
-            <img src="static/02.webp" class="w-full h-48 rounded-lg" loading="lazy">
+            <img src="static/02.webp" class="w-full h-48 rounded-lg border border-gray-600 object-cover transition-transform duration-700 transition-all hover:scale-105" loading="lazy">
           </a>
         </div>
 
-        <div class="truncate mb-1">
-          <a href="detail.html" class="text-sm hover:underline font-bold">Music title</a>
+        <div class="truncate mb-1 mt-2">
+          <a href="detail.html" class="hover:underline font-bold text-white">Music title</a>
+          <p class="text-sm font-bold">Starking</p>
         </div>
-        <p class="text-gray-600 text-sm">Starking</p>
       </section>
 
       <section class="col-span-1 overflow-hidden relative">
@@ -166,14 +176,14 @@
 
         <div class="flex-shrink-0">
           <a href="detail.html" class="block aspect-[4/3]">
-            <img src="static/03.webp" class="w-full h-48 rounded-lg" loading="lazy">
+            <img src="static/03.webp" class="w-full h-48 rounded-lg border border-gray-600 object-cover transition-transform duration-700 transition-all hover:scale-105" loading="lazy">
           </a>
         </div>
 
-        <div class="truncate mb-1">
-          <a href="detail.html" class="text-sm hover:underline font-bold">Music title</a>
+        <div class="truncate mb-1 mt-2">
+          <a href="detail.html" class="hover:underline font-bold text-white">Music title</a>
+          <p class="text-sm font-bold">Starking</p>
         </div>
-        <p class="text-gray-600 text-sm">Starking</p>
       </section>
 
       <section class="col-span-1 overflow-hidden relative">
@@ -183,14 +193,14 @@
 
         <div class="flex-shrink-0">
           <a href="detail.html" class="block aspect-[4/3]">
-            <img src="static/04.webp" class="w-full h-48 rounded-lg" loading="lazy">
+            <img src="static/04.webp" class="w-full h-48 rounded-lg border border-gray-600 object-cover transition-transform duration-700 transition-all hover:scale-105" loading="lazy">
           </a>
         </div>
 
-        <div class="truncate mb-1">
-          <a href="detail.html" class="text-sm hover:underline font-bold">Music title</a>
+        <div class="truncate mb-1 mt-2">
+          <a href="detail.html" class="hover:underline font-bold text-white">Music title</a>
+          <p class="text-sm font-bold">Starking</p>
         </div>
-        <p class="text-gray-600 text-sm">Starking</p>
       </section>
 
       <section class="col-span-1 overflow-hidden relative">
@@ -200,14 +210,14 @@
 
         <div class="flex-shrink-0">
           <a href="detail.html" class="block aspect-[4/3]">
-            <img src="static/05.webp" class="w-full h-48 rounded-lg" loading="lazy">
+            <img src="static/05.webp" class="w-full h-48 rounded-lg border border-gray-600 object-cover transition-transform duration-700 transition-all hover:scale-105" loading="lazy">
           </a>
         </div>
 
-        <div class="truncate mb-1">
-          <a href="detail.html" class="text-sm hover:underline font-bold">Music title</a>
+        <div class="truncate mb-1 mt-2">
+          <a href="detail.html" class="hover:underline font-bold text-white">Music title</a>
+          <p class="text-sm font-bold">Starking</p>
         </div>
-        <p class="text-gray-600 text-sm">Starking</p>
       </section>
 
       <section class="col-span-1 overflow-hidden relative">
@@ -217,14 +227,14 @@
 
         <div class="flex-shrink-0">
           <a href="detail.html" class="block aspect-[4/3]">
-            <img src="static/06.webp" class="w-full h-48 rounded-lg" loading="lazy">
+            <img src="static/06.webp" class="w-full h-48 rounded-lg border border-gray-600 object-cover transition-transform duration-700 transition-all hover:scale-105" loading="lazy">
           </a>
         </div>
 
-        <div class="truncate mb-1">
-          <a href="detail.html" class="text-sm hover:underline font-bold">Music title</a>
+        <div class="truncate mb-1 mt-2">
+          <a href="detail.html" class="hover:underline font-bold text-white">Music title</a>
+          <p class="text-sm font-bold">Starking</p>
         </div>
-        <p class="text-gray-600 text-sm">Starking</p>
       </section>
 
       <section class="col-span-1 overflow-hidden relative">
@@ -234,14 +244,14 @@
 
         <div class="flex-shrink-0">
           <a href="detail.html" class="block aspect-[4/3]">
-            <img src="static/07.webp" class="w-full h-48 rounded-lg" loading="lazy">
+            <img src="static/07.webp" class="w-full h-48 rounded-lg border border-gray-600 object-cover transition-transform duration-700 transition-all hover:scale-105" loading="lazy">
           </a>
         </div>
 
-        <div class="truncate mb-1">
-          <a href="detail.html" class="text-sm hover:underline font-bold">Music title</a>
+        <div class="truncate mb-1 mt-2">
+          <a href="detail.html" class="hover:underline font-bold text-white">Music title</a>
+          <p class="text-sm font-bold">Starking</p>
         </div>
-        <p class="text-gray-600 text-sm">Starking</p>
       </section>
 
       <section class="col-span-1 overflow-hidden relative">
@@ -251,14 +261,14 @@
 
         <div class="flex-shrink-0">
           <a href="detail.html" class="block aspect-[4/3]">
-            <img src="static/08.webp" class="w-full h-48 rounded-lg" loading="lazy">
+            <img src="static/08.webp" class="w-full h-48 rounded-lg border border-gray-600 object-cover transition-transform duration-700 transition-all hover:scale-105" loading="lazy">
           </a>
         </div>
 
-        <div class="truncate mb-1">
-          <a href="detail.html" class="text-sm hover:underline font-bold">Music title</a>
+        <div class="truncate mb-1 mt-2">
+          <a href="detail.html" class="hover:underline font-bold text-white">Music title</a>
+          <p class="text-sm font-bold">Starking</p>
         </div>
-        <p class="text-gray-600 text-sm">Starking</p>
       </section>
 
       <section class="col-span-1 overflow-hidden relative">
@@ -268,14 +278,14 @@
 
         <div class="flex-shrink-0">
           <a href="detail.html" class="block aspect-[4/3]">
-            <img src="static/09.webp" class="w-full h-48 rounded-lg" loading="lazy">
+            <img src="static/09.webp" class="w-full h-48 rounded-lg border border-gray-600 object-cover transition-transform duration-700 transition-all hover:scale-105" loading="lazy">
           </a>
         </div>
 
-        <div class="truncate mb-1">
-          <a href="detail.html" class="text-sm hover:underline font-bold">Music title</a>
+        <div class="truncate mb-1 mt-2">
+          <a href="detail.html" class="hover:underline font-bold text-white">Music title</a>
+          <p class="text-sm font-bold">Starking</p>
         </div>
-        <p class="text-gray-600 text-sm">Starking</p>
       </section>
 
       <section class="col-span-1 overflow-hidden relative">
@@ -285,14 +295,14 @@
 
         <div class="flex-shrink-0">
           <a href="detail.html" class="block aspect-[4/3]">
-            <img src="static/10.webp" class="w-full h-48 rounded-lg" loading="lazy">
+            <img src="static/10.webp" class="w-full h-48 rounded-lg border border-gray-600 object-cover transition-transform duration-700 transition-all hover:scale-105" loading="lazy">
           </a>
         </div>
 
-        <div class="truncate mb-1">
-          <a href="detail.html" class="text-sm hover:underline font-bold">Music title</a>
+        <div class="truncate mb-1 mt-2">
+          <a href="detail.html" class="hover:underline font-bold text-white">Music title</a>
+          <p class="text-sm font-bold">Starking</p>
         </div>
-        <p class="text-gray-600 text-sm">Starking</p>
       </section>
 
       <section class="col-span-1 overflow-hidden relative">
@@ -302,14 +312,14 @@
 
         <div class="flex-shrink-0">
           <a href="detail.html" class="block aspect-[4/3]">
-            <img src="static/11.webp" class="w-full h-48 rounded-lg" loading="lazy">
+            <img src="static/11.webp" class="w-full h-48 rounded-lg border border-gray-600 object-cover transition-transform duration-700 transition-all hover:scale-105" loading="lazy">
           </a>
         </div>
 
-        <div class="truncate mb-1">
-          <a href="detail.html" class="text-sm hover:underline font-bold">Music title</a>
+        <div class="truncate mb-1 mt-2">
+          <a href="detail.html" class="hover:underline font-bold text-white">Music title</a>
+          <p class="text-sm font-bold">Starking</p>
         </div>
-        <p class="text-gray-600 text-sm">Starking</p>
       </section>
 
       <section class="col-span-1 overflow-hidden relative">
@@ -319,15 +329,19 @@
 
         <div class="flex-shrink-0">
           <a href="detail.html" class="block aspect-[4/3]">
-            <img src="static/12.webp" class="w-full h-48 rounded-lg" loading="lazy">
+            <img src="static/12.webp" class="w-full h-48 rounded-lg border border-gray-600 object-cover transition-transform duration-700 transition-all hover:scale-105" loading="lazy">
           </a>
         </div>
 
-        <div class="truncate mb-1">
-          <a href="detail.html" class="text-sm hover:underline font-bold">Music title</a>
+        <div class="truncate mb-1 mt-2">
+          <a href="detail.html" class="hover:underline font-bold text-white">Music title</a>
+          <p class="text-sm font-bold">Starking</p>
         </div>
-        <p class="text-gray-600 text-sm">Starking</p>
       </section>
+    </div>
+
+    <div class="flex justify-center">
+      <img src="static/loading.gif" height="30" width="30">
     </div>
 
   </main>
