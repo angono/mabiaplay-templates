@@ -12,128 +12,101 @@
     href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
     integrity="sha512-HHsOCp2q4Y4k0F6VYGm3f7emzcU0P4DvP6/Q60tMqhljeS1c+gIu6N+VPlrF7s/okXvjIivkm1XxJ8j4FJZfPg=="
     crossorigin="anonymous"
-    referrerpolicy="no-referrer"
-  />
+    referrerpolicy="no-referrer"/>
+
+  <style type="text/css">
+    /* Hide scrollbar in Chrome, Safari, and Opera */
+  .no-scrollbar::-webkit-scrollbar {
+    display: none;
+  }
+
+  /* Hide scrollbar in IE, Edge, and Firefox */
+  .no-scrollbar {
+    -ms-overflow-style: none; /* IE and Edge */
+    scrollbar-width: none; /* Firefox */
+  }
+  </style>
+
 </head>
-<body class="font-sans antialiased text-gray-500 bg-black">
+<body class="bg-black text-white font-sans antialiased">
   <!-- Navbar -->
-  <nav class="bg-black border-b border-gray-800 px-4 py-2 fixed left-0 right-0 top-0 z-50">
+  <nav class="bg-[#111] border-b border-gray-800 px-2 md:px-4 py-2 fixed left-0 right-0 top-0 z-50">
     <div class="flex flex-wrap justify-between items-center">
       <div class="flex justify-start items-center">
         <button
           data-drawer-target="drawer-navigation"
           data-drawer-toggle="drawer-navigation"
           aria-controls="drawer-navigation"
-          class="p-2 mr-2 text-purple-600 rounded-lg cursor-pointer md:hidden hover:text-purple-900 hover:bg-purple-100 focus:bg-purple-100 focus:ring-2 focus:ring-purple-100">
+          class="p-2 mr-2 md:hidden text-purple-600 rounded-lg cursor-pointer hover:text-white hover:bg-purple-600">
           <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6"><path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" /></svg>
           </svg>
         </button>
 
-        <a href="index.html"style="text-shadow: 1px 1px 2px white;" class="text-lg font-bold text-purple-600 uppercase mr-4">Mabiaplay</a>
-
-        <form action="#" method="GET" class="hidden md:block md:pl-2">
+        <a href="index.html" class="flex items-center gap-2">
+          <img src="static/logo.png" alt="Mabiaplay" class="h-6">
+          <span class="text-xl font-bold">Mabiaplay</span>
+        </a>
+        <form action="#" method="GET" class="hidden md:block md:pl-3">
           <div class="relative w-64">
             <div class="flex absolute inset-y-0 left-0 items-center pl-3 pointer-events-none">
               <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-5 text-purple-600"><path stroke-linecap="round" stroke-linejoin="round" d="m21 21-5.197-5.197m0 0A7.5 7.5 0 1 0 5.196 5.196a7.5 7.5 0 0 0 10.607 10.607Z" /></svg>
             </div>
-            <input type="text" name="search" id="topbar-search" class="bg-gray-50 border border-gray-200 text-sm rounded-xl focus:ring-purple-500 focus:border-purple-500 block w-full pl-10 p-2" placeholder="Search artists, songs, albums"/>
+            <input type="text" name="search" id="topbar-search" class="bg-gray-50 text-sm rounded-full px-4 py-1.5 text-black w-72 outline-none block w-full pl-10" placeholder="Search Artists, Songs, Albums, Videos"/>
           </div>
         </form>
       </div>
 
       <div class="flex items-center lg:order-2 space-x-2 md:space-x-4">
-        <!-- Notifications -->
-        <button
-          type="button"
-          data-dropdown-toggle="notification-dropdown"
-          class="p-2 rounded-lg hover:text-white hover:bg-purple-600 focus:ring-2 focus:ring-purple-300">
-          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6"><path stroke-linecap="round" stroke-linejoin="round" d="M14.857 17.082a23.848 23.848 0 0 0 5.454-1.31A8.967 8.967 0 0 1 18 9.75V9A6 6 0 0 0 6 9v.75a8.967 8.967 0 0 1-2.312 6.022c1.733.64 3.56 1.085 5.455 1.31m5.714 0a24.255 24.255 0 0 1-5.714 0m5.714 0a3 3 0 1 1-5.714 0" /></svg>
-        </button>
 
-        <a href="#" type="button" class="flex text-white bg-purple-600 hover:bg-purple-700 focus:ring-4 focus:outline-none focus:ring-purple-300 font-medium rounded-lg text-sm px-2 sm:px-4 py-2 text-center items-center transition-all duration-300"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6"><path stroke-linecap="round" stroke-linejoin="round" d="M12 4.5v15m7.5-7.5h-15" /></svg><span class="hidden md:block">Add</span></a>
-
+        <button class="hidden md:block bg-[#00f5cc] text-black font-semibold px-4 py-1 rounded-full">Get Bcoins →</button>
+        <a href="#" type="button" class="bg-purple-600 text-white font-bold px-5 py-1 rounded-full transition-all duration-300">Download</a>
       </div>
     </div>
   </nav>
 
   <!-- Sidebar -->
-  <aside class="fixed top-0 left-0 z-40 w-64 h-screen pt-14 bg-black transition-transform -translate-x-full md:translate-x-0" aria-label="Sidenav" id="drawer-navigation">
-    <div class="overflow-y-auto py-5 px-3 h-full bg-black">
-      <ul class="space-y-2">
-        <li>
-          <a href="index.html" class="flex items-center p-2 transition-all duration-75 text-base font-medium rounded-lg group hover:bg-purple-600 hover:text-white">
-            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6"><path stroke-linecap="round" stroke-linejoin="round" d="m2.25 12 8.954-8.955c.44-.439 1.152-.439 1.591 0L21.75 12M4.5 9.75v10.125c0 .621.504 1.125 1.125 1.125H9.75v-4.875c0-.621.504-1.125 1.125-1.125h2.25c.621 0 1.125.504 1.125 1.125V21h4.125c.621 0 1.125-.504 1.125-1.125V9.75M8.25 21h8.25"/></svg>
-            <span class="ml-3">Home</span>
-          </a>
-        </li>
+  <aside class="fixed top-0 left-0 z-40 w-64 h-screen pt-14 bg-[#0a0a0a] transition-transform -translate-x-full md:translate-x-0" aria-label="Sidenav" id="drawer-navigation">
+    <div class="overflow-y-auto py-5 px-5 h-full items-start space-y-6 text-sm">
 
-        <li>
-          <a href="trending.html" class="flex items-center p-2 transition-all duration-75 text-base font-medium rounded-lg group hover:bg-purple-600 hover:text-white">
-            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6"><path stroke-linecap="round" stroke-linejoin="round" d="M15.362 5.214A8.252 8.252 0 0 1 12 21 8.25 8.25 0 0 1 6.038 7.047 8.287 8.287 0 0 0 9 9.601a8.983 8.983 0 0 1 3.361-6.867 8.21 8.21 0 0 0 3 2.48Z" /><path stroke-linecap="round" stroke-linejoin="round" d="M12 18a3.75 3.75 0 0 0 .495-7.468 5.99 5.99 0 0 0-1.925 3.547 5.975 5.975 0 0 1-2.133-1.001A3.75 3.75 0 0 0 12 18Z" /></svg>
-            <span class="ml-3">Trending</span>
-          </a>
-        </li>
+      <div class="flex items-center space-x-2">
+        <div class="w-8 h-8 rounded-full bg-gray-600"></div>
+        <a href="profile.html" class="text-gray-300 hover:text-white">Log in / Sign up</a>
+      </div>
 
-        <li>
-          <a href="new-songs.html" class="flex items-center p-2 transition-all duration-75 text-base font-medium rounded-lg group hover:bg-purple-600 hover:text-white">
-            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6"><path stroke-linecap="round" stroke-linejoin="round" d="M16.712 4.33a9.027 9.027 0 0 1 1.652 1.306c.51.51.944 1.064 1.306 1.652M16.712 4.33l-3.448 4.138m3.448-4.138a9.014 9.014 0 0 0-9.424 0M19.67 7.288l-4.138 3.448m4.138-3.448a9.014 9.014 0 0 1 0 9.424m-4.138-5.976a3.736 3.736 0 0 0-.88-1.388 3.737 3.737 0 0 0-1.388-.88m2.268 2.268a3.765 3.765 0 0 1 0 2.528m-2.268-4.796a3.765 3.765 0 0 0-2.528 0m4.796 4.796c-.181.506-.475.982-.88 1.388a3.736 3.736 0 0 1-1.388.88m2.268-2.268 4.138 3.448m0 0a9.027 9.027 0 0 1-1.306 1.652c-.51.51-1.064.944-1.652 1.306m0 0-3.448-4.138m3.448 4.138a9.014 9.014 0 0 1-9.424 0m5.976-4.138a3.765 3.765 0 0 1-2.528 0m0 0a3.736 3.736 0 0 1-1.388-.88 3.737 3.737 0 0 1-.88-1.388m2.268 2.268L7.288 19.67m0 0a9.024 9.024 0 0 1-1.652-1.306 9.027 9.027 0 0 1-1.306-1.652m0 0 4.138-3.448M4.33 16.712a9.014 9.014 0 0 1 0-9.424m4.138 5.976a3.765 3.765 0 0 1 0-2.528m0 0c.181-.506.475-.982.88-1.388a3.736 3.736 0 0 1 1.388-.88m-2.268 2.268L4.33 7.288m6.406 1.18L7.288 4.33m0 0a9.024 9.024 0 0 0-1.652 1.306A9.025 9.025 0 0 0 4.33 7.288" /></svg>
-            <span class="ml-3">New</span>
-          </a>
-        </li>
+      <div>
+        <p class="text-gray-500 uppercase text-xs mb-2">Music</p>
+        <ul class="space-y-3 transition-all duration-75">
+          <li><a href="index.html" class="flex items-center gap-2 text-gray-300 hover:text-purple-400 group"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6"><path stroke-linecap="round" stroke-linejoin="round" d="m9 9 10.5-3m0 6.553v3.75a2.25 2.25 0 0 1-1.632 2.163l-1.32.377a1.803 1.803 0 1 1-.99-3.467l2.31-.66a2.25 2.25 0 0 0 1.632-2.163Zm0 0V2.25L9 5.25v10.303m0 0v3.75a2.25 2.25 0 0 1-1.632 2.163l-1.32.377a1.803 1.803 0 0 1-.99-3.467l2.31-.66A2.25 2.25 0 0 0 9 15.553Z" /></svg> Home</a></li>
 
-        <li>
-          <a href="artists.html" class="flex items-center p-2 transition-all duration-75 text-base font-medium rounded-lg group hover:bg-purple-600 hover:text-white">
-            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6"><path stroke-linecap="round" stroke-linejoin="round" d="M18 18.72a9.094 9.094 0 0 0 3.741-.479 3 3 0 0 0-4.682-2.72m.94 3.198.001.031c0 .225-.012.447-.037.666A11.944 11.944 0 0 1 12 21c-2.17 0-4.207-.576-5.963-1.584A6.062 6.062 0 0 1 6 18.719m12 0a5.971 5.971 0 0 0-.941-3.197m0 0A5.995 5.995 0 0 0 12 12.75a5.995 5.995 0 0 0-5.058 2.772m0 0a3 3 0 0 0-4.681 2.72 8.986 8.986 0 0 0 3.74.477m.94-3.197a5.971 5.971 0 0 0-.94 3.197M15 6.75a3 3 0 1 1-6 0 3 3 0 0 1 6 0Zm6 3a2.25 2.25 0 1 1-4.5 0 2.25 2.25 0 0 1 4.5 0Zm-13.5 0a2.25 2.25 0 1 1-4.5 0 2.25 2.25 0 0 1 4.5 0Z" /></svg>
-            <span class="ml-3">Artists</span>
-          </a>
-        </li>
-        
-        <li>
-          <a href="playlist.html" class="flex items-center p-2 transition-all duration-75 text-base font-medium rounded-lg group hover:bg-purple-600 hover:text-white">
-            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6"><path stroke-linecap="round" stroke-linejoin="round" d="m9 9 10.5-3m0 6.553v3.75a2.25 2.25 0 0 1-1.632 2.163l-1.32.377a1.803 1.803 0 1 1-.99-3.467l2.31-.66a2.25 2.25 0 0 0 1.632-2.163Zm0 0V2.25L9 5.25v10.303m0 0v3.75a2.25 2.25 0 0 1-1.632 2.163l-1.32.377a1.803 1.803 0 0 1-.99-3.467l2.31-.66A2.25 2.25 0 0 0 9 15.553Z" /></svg>
-            <span class="ml-3">Playlists</span>
-          </a>
-        </li>
+          <li><a href="trending.html" class="flex items-center gap-2 text-gray-300 hover:text-purple-400 group"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6"><path stroke-linecap="round" stroke-linejoin="round" d="M15.362 5.214A8.252 8.252 0 0 1 12 21 8.25 8.25 0 0 1 6.038 7.047 8.287 8.287 0 0 0 9 9.601a8.983 8.983 0 0 1 3.361-6.867 8.21 8.21 0 0 0 3 2.48Z" /><path stroke-linecap="round" stroke-linejoin="round" d="M12 18a3.75 3.75 0 0 0 .495-7.468 5.99 5.99 0 0 0-1.925 3.547 5.975 5.975 0 0 1-2.133-1.001A3.75 3.75 0 0 0 12 18Z" /></svg> Trending</a></li>
 
-        <li>
-          <a href="genres.html" class="flex items-center p-2 transition-all duration-75 text-base font-medium rounded-lg group hover:bg-purple-600 hover:text-white">
-            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6"><path stroke-linecap="round" stroke-linejoin="round" d="M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z" /><path stroke-linecap="round" stroke-linejoin="round" d="M15.91 11.672a.375.375 0 0 1 0 .656l-5.603 3.113a.375.375 0 0 1-.557-.328V8.887c0-.286.307-.466.557-.327l5.603 3.112Z" /></svg>
-            <span class="ml-3">Genres</span>
-          </a>
-        </li>
+          <li><a href="new-songs.html" class="flex items-center gap-2 text-gray-300 hover:text-purple-400 group"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6"><path stroke-linecap="round" stroke-linejoin="round" d="M12 7.5h1.5m-1.5 3h1.5m-7.5 3h7.5m-7.5 3h7.5m3-9h3.375c.621 0 1.125.504 1.125 1.125V18a2.25 2.25 0 0 1-2.25 2.25M16.5 7.5V18a2.25 2.25 0 0 0 2.25 2.25M16.5 7.5V4.875c0-.621-.504-1.125-1.125-1.125H4.125C3.504 3.75 3 4.254 3 4.875V18a2.25 2.25 0 0 0 2.25 2.25h13.5M6 7.5h3v3H6v-3Z" /></svg> New</a></li>
 
-        <li>
-          <a href="profile.html" class="flex items-center p-2 transition-all duration-75 text-base font-medium rounded-lg group hover:bg-purple-600 hover:text-white"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6"><path stroke-linecap="round" stroke-linejoin="round" d="M15.75 6a3.75 3.75 0 1 1-7.5 0 3.75 3.75 0 0 1 7.5 0ZM4.501 20.118a7.5 7.5 0 0 1 14.998 0A17.933 17.933 0 0 1 12 21.75c-2.676 0-5.216-.584-7.499-1.632Z" /></svg><span class="ml-3">Profile</span>
-          </a>
-        </li>
+          <li><a href="artists.html" class="flex items-center gap-2 text-gray-300 hover:text-purple-400 group"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6"><path stroke-linecap="round" stroke-linejoin="round" d="M12 18.75a6 6 0 0 0 6-6v-1.5m-6 7.5a6 6 0 0 1-6-6v-1.5m6 7.5v3.75m-3.75 0h7.5M12 15.75a3 3 0 0 1-3-3V4.5a3 3 0 1 1 6 0v8.25a3 3 0 0 1-3 3Z" /></svg> Artists</a></li>
 
-        <li>
-          <a href="playlist.html" class="flex items-center p-2 transition-all duration-75 text-base font-medium rounded-lg group hover:bg-purple-600 hover:text-white">
-            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6"><path stroke-linecap="round" stroke-linejoin="round" d="M21 8.25c0-2.485-2.099-4.5-4.688-4.5-1.935 0-3.597 1.126-4.312 2.733-.715-1.607-2.377-2.733-4.313-2.733C5.1 3.75 3 5.765 3 8.25c0 7.22 9 12 9 12s9-4.78 9-12Z" /></svg>
-            <span class="ml-3">Favorites</span>
-          </a>
-        </li>
+          <li><a href="trending.html" class="flex items-center gap-2 text-gray-300 hover:text-purple-400 group"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6"><path stroke-linecap="round" stroke-linejoin="round" d="m15.75 10.5 4.72-4.72a.75.75 0 0 1 1.28.53v11.38a.75.75 0 0 1-1.28.53l-4.72-4.72M4.5 18.75h9a2.25 2.25 0 0 0 2.25-2.25v-9a2.25 2.25 0 0 0-2.25-2.25h-9A2.25 2.25 0 0 0 2.25 7.5v9a2.25 2.25 0 0 0 2.25 2.25Z" /></svg> Videos</a></li>
 
-        <li>
-          <a href="playlist.html" class="flex items-center p-2 transition-all duration-75 text-base font-medium rounded-lg group hover:bg-purple-600 hover:text-white">
-            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6"><path stroke-linecap="round" stroke-linejoin="round" d="M3.75 12h16.5m-16.5 3.75h16.5M3.75 19.5h16.5M5.625 4.5h12.75a1.875 1.875 0 0 1 0 3.75H5.625a1.875 1.875 0 0 1 0-3.75Z" /></svg>
-            <span class="ml-3">My Playlists</span>
-          </a>
-        </li>
+          <li><a href="playlist.html" class="flex items-center gap-2 text-gray-300 hover:text-purple-400 group"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6"><path stroke-linecap="round" stroke-linejoin="round" d="M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z" /><path stroke-linecap="round" stroke-linejoin="round" d="M15.91 11.672a.375.375 0 0 1 0 .656l-5.603 3.113a.375.375 0 0 1-.557-.328V8.887c0-.286.307-.466.557-.327l5.603 3.112Z" /></svg> Playlists</a></li>
 
-        <li>
-          <a href="settings.html" class="flex items-center p-2 transition-all duration-75 text-base font-medium rounded-lg group hover:bg-purple-600 hover:text-white">
-            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6"><path stroke-linecap="round" stroke-linejoin="round" d="M6 13.5V3.75m0 9.75a1.5 1.5 0 0 1 0 3m0-3a1.5 1.5 0 0 0 0 3m0 3.75V16.5m12-3V3.75m0 9.75a1.5 1.5 0 0 1 0 3m0-3a1.5 1.5 0 0 0 0 3m0 3.75V16.5m-6-9V3.75m0 3.75a1.5 1.5 0 0 1 0 3m0-3a1.5 1.5 0 0 0 0 3m0 9.75V10.5" /></svg>
-            <span class="ml-3">Settings</span>
-          </a>
-        </li>
-      </ul>
+          <li><a href="trending.html" class="flex items-center gap-2 text-gray-300 hover:text-purple-400 group"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6"><path stroke-linecap="round" stroke-linejoin="round" d="M7.5 14.25v2.25m3-4.5v4.5m3-6.75v6.75m3-9v9M6 20.25h12A2.25 2.25 0 0 0 20.25 18V6A2.25 2.25 0 0 0 18 3.75H6A2.25 2.25 0 0 0 3.75 6v12A2.25 2.25 0 0 0 6 20.25Z" /></svg> Charts</a></li>
+
+          <li><a href="genres.html" class="flex items-center gap-2 text-gray-300 hover:text-purple-400 group"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6"><path stroke-linecap="round" stroke-linejoin="round" d="M16.712 4.33a9.027 9.027 0 0 1 1.652 1.306c.51.51.944 1.064 1.306 1.652M16.712 4.33l-3.448 4.138m3.448-4.138a9.014 9.014 0 0 0-9.424 0M19.67 7.288l-4.138 3.448m4.138-3.448a9.014 9.014 0 0 1 0 9.424m-4.138-5.976a3.736 3.736 0 0 0-.88-1.388 3.737 3.737 0 0 0-1.388-.88m2.268 2.268a3.765 3.765 0 0 1 0 2.528m-2.268-4.796a3.765 3.765 0 0 0-2.528 0m4.796 4.796c-.181.506-.475.982-.88 1.388a3.736 3.736 0 0 1-1.388.88m2.268-2.268 4.138 3.448m0 0a9.027 9.027 0 0 1-1.306 1.652c-.51.51-1.064.944-1.652 1.306m0 0-3.448-4.138m3.448 4.138a9.014 9.014 0 0 1-9.424 0m5.976-4.138a3.765 3.765 0 0 1-2.528 0m0 0a3.736 3.736 0 0 1-1.388-.88 3.737 3.737 0 0 1-.88-1.388m2.268 2.268L7.288 19.67m0 0a9.024 9.024 0 0 1-1.652-1.306 9.027 9.027 0 0 1-1.306-1.652m0 0 4.138-3.448M4.33 16.712a9.014 9.014 0 0 1 0-9.424m4.138 5.976a3.765 3.765 0 0 1 0-2.528m0 0c.181-.506.475-.982.88-1.388a3.736 3.736 0 0 1 1.388-.88m-2.268 2.268L4.33 7.288m6.406 1.18L7.288 4.33m0 0a9.024 9.024 0 0 0-1.652 1.306A9.025 9.025 0 0 0 4.33 7.288" /></svg> Genres</a></li>
+        </ul>
+      </div>
+
+      <div>
+        <p class="text-gray-500 uppercase text-xs mb-2">Library</p>
+        <ul class="space-y-3 transition-all duration-75">
+          <li class="flex items-center gap-2 text-gray-300 hover:text-purple-400 group"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6"><path stroke-linecap="round" stroke-linejoin="round" d="M12 4.5v15m7.5-7.5h-15" /></svg> Add Playlist</li>
+        </ul>
+      </div>
+
     </div>
   </aside>
 
   <!-- Main -->
   <main class="p-4 md:ml-64 h-auto pt-20">
-    <h2 class="text-2xl font-bold mb-4 text-white">Artists</h2>
+    <h2 class="text-xl font-bold mb-4">Artists</h2>
 
 
   </main>
