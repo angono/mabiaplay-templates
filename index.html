@@ -6,6 +6,10 @@
   <title>Mabiaplay</title>
   <!-- Tailwind CSS via CDN -->
   <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- Include GLightbox CSS -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/glightbox/dist/css/glightbox.min.css">
+
   <!-- Font Awesome CDN -->
   <link
     rel="stylesheet"
@@ -110,9 +114,9 @@
     <section class="flex-1 overflow-y-auto mb-6">
       <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
         <div class="col-span-1 md:col-span-2 relative bg-gradient-to-r from-sky-100 to-purple-300 rounded-xl p-6 overflow-hidden">
-          <div class="text-black truncate">
+          <div class="block text-black truncate">
             <h2 class="text-lg md:text-3xl font-semibold">A Day To Remember</h2>
-            <p class="mt-1">👉🏽 30th december, 2025 concert</p>
+            <p class="mt-1">30th december, 2025 concert</p>
             <p class="mt-.5 text-gray-500">Starking, Ozagain, B1</p>
           </div>
           <img src="static/01.webp" class="absolute right-0 top-0 h-full object-cover opacity-75 rounded-r-xl" alt="Jux"/>
@@ -146,54 +150,74 @@
 
       <!-- Music Section -->
       <div id="stories-container" class="flex space-x-4 overflow-x-scroll scrollbar-hide no-scrollbar">
-        <div class="overflow-hidden flex-shrink-0 w-30 h-48 md:h-52 rounded-lg">
+        <div class="group relative overflow-hidden rounded-lg transition-all duration-300 hover:-translate-y-1 hover:shadow-media cursor-pointer flex-shrink-0 w-30 h-48 md:h-52">
           <img src="static/01.webp" alt="username" class="w-30 h-36 md:h-44 rounded-lg object-cover border border-gray-600">
           <p class="p-2 text-sm truncate">Song's title 1</p>
+
+          <a href="static/01.webp" data-title="Song's title 1" class="glightbox absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-12 h-12 bg-white/70 rounded-full flex items-center justify-center opacity-0 transition-opacity duration-300 group-hover:opacity-100"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6 text-purple-600 fill-purple-600"><path stroke-linecap="round" stroke-linejoin="round" d="M5.25 5.653c0-.856.917-1.398 1.667-.986l11.54 6.347a1.125 1.125 0 0 1 0 1.972l-11.54 6.347a1.125 1.125 0 0 1-1.667-.986V5.653Z" /></svg></a>
         </div>
 
-        <div class="overflow-hidden flex-shrink-0 w-30 h-48 md:h-52 rounded-lg">
+        <div class="group relative overflow-hidden rounded-lg transition-all duration-300 hover:-translate-y-1 hover:shadow-media cursor-pointer flex-shrink-0 w-30 h-48 md:h-52">
           <img src="static/02.webp" alt="username" class="w-30 h-36 md:h-44 rounded-lg object-cover border border-gray-600">
           <p class="p-2 text-sm truncate">Song's title 2</p>
+
+          <a href="static/02.webp" data-title="Song's title 2" class="glightbox absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-12 h-12 bg-white/70 rounded-full flex items-center justify-center opacity-0 transition-opacity duration-300 group-hover:opacity-100"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6 text-purple-600 fill-purple-600"><path stroke-linecap="round" stroke-linejoin="round" d="M5.25 5.653c0-.856.917-1.398 1.667-.986l11.54 6.347a1.125 1.125 0 0 1 0 1.972l-11.54 6.347a1.125 1.125 0 0 1-1.667-.986V5.653Z" /></svg></a>
         </div>
 
-        <div class="overflow-hidden flex-shrink-0 w-30 h-48 md:h-52 rounded-lg">
+        <div class="group relative overflow-hidden rounded-lg transition-all duration-300 hover:-translate-y-1 hover:shadow-media cursor-pointer flex-shrink-0 w-30 h-48 md:h-52">
           <img src="static/03.webp" alt="username" class="w-30 h-36 md:h-44 rounded-lg object-cover border border-gray-600">
           <p class="p-2 text-sm truncate">Song's title 3</p>
+
+          <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-12 h-12 bg-white/70 rounded-full flex items-center justify-center opacity-0 transition-opacity duration-300 group-hover:opacity-100"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6 text-purple-600 fill-purple-600"><path stroke-linecap="round" stroke-linejoin="round" d="M5.25 5.653c0-.856.917-1.398 1.667-.986l11.54 6.347a1.125 1.125 0 0 1 0 1.972l-11.54 6.347a1.125 1.125 0 0 1-1.667-.986V5.653Z" /></svg></div>
         </div>
 
-        <div class="overflow-hidden flex-shrink-0 w-30 h-48 md:h-52 rounded-lg">
+        <div class="group relative overflow-hidden rounded-lg transition-all duration-300 hover:-translate-y-1 hover:shadow-media cursor-pointer flex-shrink-0 w-30 h-48 md:h-52">
           <img src="static/04.webp" alt="username" class="w-30 h-36 md:h-44 rounded-lg object-cover border border-gray-600">
           <p class="p-2 text-sm truncate">Song's title 4</p>
+
+          <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-12 h-12 bg-white/70 rounded-full flex items-center justify-center opacity-0 transition-opacity duration-300 group-hover:opacity-100"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6 text-purple-600 fill-purple-600"><path stroke-linecap="round" stroke-linejoin="round" d="M5.25 5.653c0-.856.917-1.398 1.667-.986l11.54 6.347a1.125 1.125 0 0 1 0 1.972l-11.54 6.347a1.125 1.125 0 0 1-1.667-.986V5.653Z" /></svg></div>
         </div>
 
-        <div class="overflow-hidden flex-shrink-0 w-30 h-48 md:h-52 rounded-lg">
+        <div class="group relative overflow-hidden rounded-lg transition-all duration-300 hover:-translate-y-1 hover:shadow-media cursor-pointer flex-shrink-0 w-30 h-48 md:h-52">
           <img src="static/05.webp" alt="username" class="w-30 h-36 md:h-44 rounded-lg object-cover border border-gray-600">
           <p class="p-2 text-sm truncate">Song's title 5</p>
+
+          <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-12 h-12 bg-white/70 rounded-full flex items-center justify-center opacity-0 transition-opacity duration-300 group-hover:opacity-100"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6 text-purple-600 fill-purple-600"><path stroke-linecap="round" stroke-linejoin="round" d="M5.25 5.653c0-.856.917-1.398 1.667-.986l11.54 6.347a1.125 1.125 0 0 1 0 1.972l-11.54 6.347a1.125 1.125 0 0 1-1.667-.986V5.653Z" /></svg></div>
         </div>
 
-        <div class="overflow-hidden flex-shrink-0 w-30 h-48 md:h-52 rounded-lg">
+        <div class="group relative overflow-hidden rounded-lg transition-all duration-300 hover:-translate-y-1 hover:shadow-media cursor-pointer flex-shrink-0 w-30 h-48 md:h-52">
           <img src="static/06.webp" alt="username" class="w-30 h-36 md:h-44 rounded-lg object-cover border border-gray-600">
           <p class="p-2 text-sm truncate">Song's title 6</p>
+
+          <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-12 h-12 bg-white/70 rounded-full flex items-center justify-center opacity-0 transition-opacity duration-300 group-hover:opacity-100"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6 text-purple-600 fill-purple-600"><path stroke-linecap="round" stroke-linejoin="round" d="M5.25 5.653c0-.856.917-1.398 1.667-.986l11.54 6.347a1.125 1.125 0 0 1 0 1.972l-11.54 6.347a1.125 1.125 0 0 1-1.667-.986V5.653Z" /></svg></div>
         </div>
 
-        <div class="overflow-hidden flex-shrink-0 w-30 h-48 md:h-52 rounded-lg">
+        <div class="group relative overflow-hidden rounded-lg transition-all duration-300 hover:-translate-y-1 hover:shadow-media cursor-pointer flex-shrink-0 w-30 h-48 md:h-52">
           <img src="static/07.webp" alt="username" class="w-30 h-36 md:h-44 rounded-lg object-cover border border-gray-600">
           <p class="p-2 text-sm truncate">Song's title 7</p>
+
+          <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-12 h-12 bg-white/70 rounded-full flex items-center justify-center opacity-0 transition-opacity duration-300 group-hover:opacity-100"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6 text-purple-600 fill-purple-600"><path stroke-linecap="round" stroke-linejoin="round" d="M5.25 5.653c0-.856.917-1.398 1.667-.986l11.54 6.347a1.125 1.125 0 0 1 0 1.972l-11.54 6.347a1.125 1.125 0 0 1-1.667-.986V5.653Z" /></svg></div>
         </div>
 
-        <div class="overflow-hidden flex-shrink-0 w-30 h-48 md:h-52 rounded-lg">
+        <div class="group relative overflow-hidden rounded-lg transition-all duration-300 hover:-translate-y-1 hover:shadow-media cursor-pointer flex-shrink-0 w-30 h-48 md:h-52">
           <img src="static/08.webp" alt="username" class="w-30 h-36 md:h-44 rounded-lg object-cover border border-gray-600">
           <p class="p-2 text-sm truncate">Song's title 8</p>
+
+          <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-12 h-12 bg-white/70 rounded-full flex items-center justify-center opacity-0 transition-opacity duration-300 group-hover:opacity-100"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6 text-purple-600 fill-purple-600"><path stroke-linecap="round" stroke-linejoin="round" d="M5.25 5.653c0-.856.917-1.398 1.667-.986l11.54 6.347a1.125 1.125 0 0 1 0 1.972l-11.54 6.347a1.125 1.125 0 0 1-1.667-.986V5.653Z" /></svg></div>
         </div>
 
-        <div class="overflow-hidden flex-shrink-0 w-30 h-48 md:h-52 rounded-lg">
+        <div class="group relative overflow-hidden rounded-lg transition-all duration-300 hover:-translate-y-1 hover:shadow-media cursor-pointer flex-shrink-0 w-30 h-48 md:h-52">
           <img src="static/09.webp" alt="username" class="w-30 h-36 md:h-44 rounded-lg object-cover border border-gray-600">
           <p class="p-2 text-sm truncate">Song's title 9</p>
+
+          <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-12 h-12 bg-white/70 rounded-full flex items-center justify-center opacity-0 transition-opacity duration-300 group-hover:opacity-100"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6 text-purple-600 fill-purple-600"><path stroke-linecap="round" stroke-linejoin="round" d="M5.25 5.653c0-.856.917-1.398 1.667-.986l11.54 6.347a1.125 1.125 0 0 1 0 1.972l-11.54 6.347a1.125 1.125 0 0 1-1.667-.986V5.653Z" /></svg></div>
         </div>
 
-        <div class="overflow-hidden flex-shrink-0 w-30 h-48 md:h-52 rounded-lg">
+        <div class="group relative overflow-hidden rounded-lg transition-all duration-300 hover:-translate-y-1 hover:shadow-media cursor-pointer flex-shrink-0 w-30 h-48 md:h-52">
           <img src="static/10.webp" alt="username" class="w-30 h-36 md:h-44 rounded-lg object-cover border border-gray-600">
           <p class="p-2 text-sm truncate">Song's title 10</p>
+
+          <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-12 h-12 bg-white/70 rounded-full flex items-center justify-center opacity-0 transition-opacity duration-300 group-hover:opacity-100"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6 text-purple-600 fill-purple-600"><path stroke-linecap="round" stroke-linejoin="round" d="M5.25 5.653c0-.856.917-1.398 1.667-.986l11.54 6.347a1.125 1.125 0 0 1 0 1.972l-11.54 6.347a1.125 1.125 0 0 1-1.667-.986V5.653Z" /></svg></div>
         </div>
       </div>
     </section>
@@ -221,74 +245,94 @@
 
       <!-- Music Section -->
       <div id="stories-container" class="flex space-x-4 overflow-x-scroll scrollbar-hide no-scrollbar">
-        <div class="overflow-hidden flex-shrink-0 w-30 h-48 md:h-52 rounded-lg">
+        <div class="group relative overflow-hidden rounded-lg transition-all duration-300 hover:-translate-y-1 hover:shadow-media cursor-pointer flex-shrink-0 w-30 h-48 md:h-52">
           <a href="#" class="relative">
             <img src="static/01.webp" alt="username" class="w-30 h-36 md:h-44 rounded-lg object-cover border border-gray-600">
           </a>
           <p class="p-2 text-sm truncate">Song's title 1</p>
+
+          <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-12 h-12 bg-white/70 rounded-full flex items-center justify-center opacity-0 transition-opacity duration-300 group-hover:opacity-100"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6 text-purple-600 fill-purple-600"><path stroke-linecap="round" stroke-linejoin="round" d="M5.25 5.653c0-.856.917-1.398 1.667-.986l11.54 6.347a1.125 1.125 0 0 1 0 1.972l-11.54 6.347a1.125 1.125 0 0 1-1.667-.986V5.653Z" /></svg></div>
         </div>
 
-        <div class="overflow-hidden flex-shrink-0 w-30 h-48 md:h-52 rounded-lg">
+        <div class="group relative overflow-hidden rounded-lg transition-all duration-300 hover:-translate-y-1 hover:shadow-media cursor-pointer flex-shrink-0 w-30 h-48 md:h-52">
           <a href="#" class="relative">
             <img src="static/02.webp" alt="username" class="w-30 h-36 md:h-44 rounded-lg object-cover border border-gray-600">
           </a>
           <p class="p-2 text-sm truncate">Song's title 2</p>
+
+          <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-12 h-12 bg-white/70 rounded-full flex items-center justify-center opacity-0 transition-opacity duration-300 group-hover:opacity-100"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6 text-purple-600 fill-purple-600"><path stroke-linecap="round" stroke-linejoin="round" d="M5.25 5.653c0-.856.917-1.398 1.667-.986l11.54 6.347a1.125 1.125 0 0 1 0 1.972l-11.54 6.347a1.125 1.125 0 0 1-1.667-.986V5.653Z" /></svg></div>
         </div>
 
-        <div class="overflow-hidden flex-shrink-0 w-30 h-48 md:h-52 rounded-lg">
+        <div class="group relative overflow-hidden rounded-lg transition-all duration-300 hover:-translate-y-1 hover:shadow-media cursor-pointer flex-shrink-0 w-30 h-48 md:h-52">
           <a href="#" class="relative">
             <img src="static/03.webp" alt="username" class="w-30 h-36 md:h-44 rounded-lg object-cover border border-gray-600">
           </a>
           <p class="p-2 text-sm truncate">Song's title 3</p>
+
+          <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-12 h-12 bg-white/70 rounded-full flex items-center justify-center opacity-0 transition-opacity duration-300 group-hover:opacity-100"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6 text-purple-600 fill-purple-600"><path stroke-linecap="round" stroke-linejoin="round" d="M5.25 5.653c0-.856.917-1.398 1.667-.986l11.54 6.347a1.125 1.125 0 0 1 0 1.972l-11.54 6.347a1.125 1.125 0 0 1-1.667-.986V5.653Z" /></svg></div>
         </div>
 
-        <div class="overflow-hidden flex-shrink-0 w-30 h-48 md:h-52 rounded-lg">
+        <div class="group relative overflow-hidden rounded-lg transition-all duration-300 hover:-translate-y-1 hover:shadow-media cursor-pointer flex-shrink-0 w-30 h-48 md:h-52">
           <a href="#" class="relative">
             <img src="static/04.webp" alt="username" class="w-30 h-36 md:h-44 rounded-lg object-cover border border-gray-600">
           </a>
           <p class="p-2 text-sm truncate">Song's title 4</p>
+
+          <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-12 h-12 bg-white/70 rounded-full flex items-center justify-center opacity-0 transition-opacity duration-300 group-hover:opacity-100"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6 text-purple-600 fill-purple-600"><path stroke-linecap="round" stroke-linejoin="round" d="M5.25 5.653c0-.856.917-1.398 1.667-.986l11.54 6.347a1.125 1.125 0 0 1 0 1.972l-11.54 6.347a1.125 1.125 0 0 1-1.667-.986V5.653Z" /></svg></div>
         </div>
 
-        <div class="overflow-hidden flex-shrink-0 w-30 h-48 md:h-52 rounded-lg">
+        <div class="group relative overflow-hidden rounded-lg transition-all duration-300 hover:-translate-y-1 hover:shadow-media cursor-pointer flex-shrink-0 w-30 h-48 md:h-52">
           <a href="#" class="relative">
             <img src="static/05.webp" alt="username" class="w-30 h-36 md:h-44 rounded-lg object-cover border border-gray-600">
           </a>
           <p class="p-2 text-sm truncate">Song's title 5</p>
+
+          <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-12 h-12 bg-white/70 rounded-full flex items-center justify-center opacity-0 transition-opacity duration-300 group-hover:opacity-100"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6 text-purple-600 fill-purple-600"><path stroke-linecap="round" stroke-linejoin="round" d="M5.25 5.653c0-.856.917-1.398 1.667-.986l11.54 6.347a1.125 1.125 0 0 1 0 1.972l-11.54 6.347a1.125 1.125 0 0 1-1.667-.986V5.653Z" /></svg></div>
         </div>
 
-        <div class="overflow-hidden flex-shrink-0 w-30 h-48 md:h-52 rounded-lg">
+        <div class="group relative overflow-hidden rounded-lg transition-all duration-300 hover:-translate-y-1 hover:shadow-media cursor-pointer flex-shrink-0 w-30 h-48 md:h-52">
           <a href="#" class="relative">
             <img src="static/06.webp" alt="username" class="w-30 h-36 md:h-44 rounded-lg object-cover border border-gray-600">
           </a>
           <p class="p-2 text-sm truncate">Song's title 6</p>
+
+          <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-12 h-12 bg-white/70 rounded-full flex items-center justify-center opacity-0 transition-opacity duration-300 group-hover:opacity-100"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6 text-purple-600 fill-purple-600"><path stroke-linecap="round" stroke-linejoin="round" d="M5.25 5.653c0-.856.917-1.398 1.667-.986l11.54 6.347a1.125 1.125 0 0 1 0 1.972l-11.54 6.347a1.125 1.125 0 0 1-1.667-.986V5.653Z" /></svg></div>
         </div>
 
-        <div class="overflow-hidden flex-shrink-0 w-30 h-48 md:h-52 rounded-lg">
+        <div class="group relative overflow-hidden rounded-lg transition-all duration-300 hover:-translate-y-1 hover:shadow-media cursor-pointer flex-shrink-0 w-30 h-48 md:h-52">
           <a href="#" class="relative">
             <img src="static/07.webp" alt="username" class="w-30 h-36 md:h-44 rounded-lg object-cover border border-gray-600">
           </a>
           <p class="p-2 text-sm truncate">Song's title 7</p>
+
+          <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-12 h-12 bg-white/70 rounded-full flex items-center justify-center opacity-0 transition-opacity duration-300 group-hover:opacity-100"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6 text-purple-600 fill-purple-600"><path stroke-linecap="round" stroke-linejoin="round" d="M5.25 5.653c0-.856.917-1.398 1.667-.986l11.54 6.347a1.125 1.125 0 0 1 0 1.972l-11.54 6.347a1.125 1.125 0 0 1-1.667-.986V5.653Z" /></svg></div>
         </div>
 
-        <div class="overflow-hidden flex-shrink-0 w-30 h-48 md:h-52 rounded-lg">
+        <div class="group relative overflow-hidden rounded-lg transition-all duration-300 hover:-translate-y-1 hover:shadow-media cursor-pointer flex-shrink-0 w-30 h-48 md:h-52">
           <a href="#" class="relative">
             <img src="static/08.webp" alt="username" class="w-30 h-36 md:h-44 rounded-lg object-cover border border-gray-600">
           </a>
           <p class="p-2 text-sm truncate">Song's title 8</p>
+
+          <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-12 h-12 bg-white/70 rounded-full flex items-center justify-center opacity-0 transition-opacity duration-300 group-hover:opacity-100"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6 text-purple-600 fill-purple-600"><path stroke-linecap="round" stroke-linejoin="round" d="M5.25 5.653c0-.856.917-1.398 1.667-.986l11.54 6.347a1.125 1.125 0 0 1 0 1.972l-11.54 6.347a1.125 1.125 0 0 1-1.667-.986V5.653Z" /></svg></div>
         </div>
 
-        <div class="overflow-hidden flex-shrink-0 w-30 h-48 md:h-52 rounded-lg">
+        <div class="group relative overflow-hidden rounded-lg transition-all duration-300 hover:-translate-y-1 hover:shadow-media cursor-pointer flex-shrink-0 w-30 h-48 md:h-52">
           <a href="#" class="relative">
             <img src="static/09.webp" alt="username" class="w-30 h-36 md:h-44 rounded-lg object-cover border border-gray-600">
           </a>
           <p class="p-2 text-sm truncate">Song's title 9</p>
+
+          <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-12 h-12 bg-white/70 rounded-full flex items-center justify-center opacity-0 transition-opacity duration-300 group-hover:opacity-100"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6 text-purple-600 fill-purple-600"><path stroke-linecap="round" stroke-linejoin="round" d="M5.25 5.653c0-.856.917-1.398 1.667-.986l11.54 6.347a1.125 1.125 0 0 1 0 1.972l-11.54 6.347a1.125 1.125 0 0 1-1.667-.986V5.653Z" /></svg></div>
         </div>
 
-        <div class="overflow-hidden flex-shrink-0 w-30 h-48 md:h-52 rounded-lg">
+        <div class="group relative overflow-hidden rounded-lg transition-all duration-300 hover:-translate-y-1 hover:shadow-media cursor-pointer flex-shrink-0 w-30 h-48 md:h-52">
           <a href="#" class="relative">
             <img src="static/10.webp" alt="username" class="w-30 h-36 md:h-44 rounded-lg object-cover border border-gray-600">
           </a>
           <p class="p-2 text-sm truncate">Song's title 10</p>
+
+          <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-12 h-12 bg-white/70 rounded-full flex items-center justify-center opacity-0 transition-opacity duration-300 group-hover:opacity-100"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6 text-purple-600 fill-purple-600"><path stroke-linecap="round" stroke-linejoin="round" d="M5.25 5.653c0-.856.917-1.398 1.667-.986l11.54 6.347a1.125 1.125 0 0 1 0 1.972l-11.54 6.347a1.125 1.125 0 0 1-1.667-.986V5.653Z" /></svg></div>
         </div>
       </div>
     </section>
@@ -316,74 +360,94 @@
 
       <!-- Music Section -->
       <div id="stories-container" class="flex space-x-4 overflow-x-scroll scrollbar-hide no-scrollbar">
-        <div class="overflow-hidden flex-shrink-0 w-30 h-48 md:h-52 rounded-lg">
+        <div class="group relative overflow-hidden rounded-lg transition-all duration-300 hover:-translate-y-1 hover:shadow-media cursor-pointer flex-shrink-0 w-30 h-48 md:h-52">
           <a href="#" class="relative">
             <img src="static/01.webp" alt="username" class="w-30 h-36 md:h-44 rounded-lg object-cover border border-gray-600">
           </a>
           <p class="p-2 text-sm truncate">Song's title 1</p>
+
+          <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-12 h-12 bg-white/70 rounded-full flex items-center justify-center opacity-0 transition-opacity duration-300 group-hover:opacity-100"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6 text-purple-600 fill-purple-600"><path stroke-linecap="round" stroke-linejoin="round" d="M5.25 5.653c0-.856.917-1.398 1.667-.986l11.54 6.347a1.125 1.125 0 0 1 0 1.972l-11.54 6.347a1.125 1.125 0 0 1-1.667-.986V5.653Z" /></svg></div>
         </div>
 
-        <div class="overflow-hidden flex-shrink-0 w-30 h-48 md:h-52 rounded-lg">
+        <div class="group relative overflow-hidden rounded-lg transition-all duration-300 hover:-translate-y-1 hover:shadow-media cursor-pointer flex-shrink-0 w-30 h-48 md:h-52">
           <a href="#" class="relative">
             <img src="static/02.webp" alt="username" class="w-30 h-36 md:h-44 rounded-lg object-cover border border-gray-600">
           </a>
           <p class="p-2 text-sm truncate">Song's title 2</p>
+
+          <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-12 h-12 bg-white/70 rounded-full flex items-center justify-center opacity-0 transition-opacity duration-300 group-hover:opacity-100"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6 text-purple-600 fill-purple-600"><path stroke-linecap="round" stroke-linejoin="round" d="M5.25 5.653c0-.856.917-1.398 1.667-.986l11.54 6.347a1.125 1.125 0 0 1 0 1.972l-11.54 6.347a1.125 1.125 0 0 1-1.667-.986V5.653Z" /></svg></div>
         </div>
 
-        <div class="overflow-hidden flex-shrink-0 w-30 h-48 md:h-52 rounded-lg">
+        <div class="group relative overflow-hidden rounded-lg transition-all duration-300 hover:-translate-y-1 hover:shadow-media cursor-pointer flex-shrink-0 w-30 h-48 md:h-52">
           <a href="#" class="relative">
             <img src="static/03.webp" alt="username" class="w-30 h-36 md:h-44 rounded-lg object-cover border border-gray-600">
           </a>
           <p class="p-2 text-sm truncate">Song's title 3</p>
+
+          <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-12 h-12 bg-white/70 rounded-full flex items-center justify-center opacity-0 transition-opacity duration-300 group-hover:opacity-100"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6 text-purple-600 fill-purple-600"><path stroke-linecap="round" stroke-linejoin="round" d="M5.25 5.653c0-.856.917-1.398 1.667-.986l11.54 6.347a1.125 1.125 0 0 1 0 1.972l-11.54 6.347a1.125 1.125 0 0 1-1.667-.986V5.653Z" /></svg></div>
         </div>
 
-        <div class="overflow-hidden flex-shrink-0 w-30 h-48 md:h-52 rounded-lg">
+        <div class="group relative overflow-hidden rounded-lg transition-all duration-300 hover:-translate-y-1 hover:shadow-media cursor-pointer flex-shrink-0 w-30 h-48 md:h-52">
           <a href="#" class="relative">
             <img src="static/04.webp" alt="username" class="w-30 h-36 md:h-44 rounded-lg object-cover border border-gray-600">
           </a>
           <p class="p-2 text-sm truncate">Song's title 4</p>
+
+          <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-12 h-12 bg-white/70 rounded-full flex items-center justify-center opacity-0 transition-opacity duration-300 group-hover:opacity-100"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6 text-purple-600 fill-purple-600"><path stroke-linecap="round" stroke-linejoin="round" d="M5.25 5.653c0-.856.917-1.398 1.667-.986l11.54 6.347a1.125 1.125 0 0 1 0 1.972l-11.54 6.347a1.125 1.125 0 0 1-1.667-.986V5.653Z" /></svg></div>
         </div>
 
-        <div class="overflow-hidden flex-shrink-0 w-30 h-48 md:h-52 rounded-lg">
+        <div class="group relative overflow-hidden rounded-lg transition-all duration-300 hover:-translate-y-1 hover:shadow-media cursor-pointer flex-shrink-0 w-30 h-48 md:h-52">
           <a href="#" class="relative">
             <img src="static/05.webp" alt="username" class="w-30 h-36 md:h-44 rounded-lg object-cover border border-gray-600">
           </a>
           <p class="p-2 text-sm truncate">Song's title 5</p>
+
+          <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-12 h-12 bg-white/70 rounded-full flex items-center justify-center opacity-0 transition-opacity duration-300 group-hover:opacity-100"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6 text-purple-600 fill-purple-600"><path stroke-linecap="round" stroke-linejoin="round" d="M5.25 5.653c0-.856.917-1.398 1.667-.986l11.54 6.347a1.125 1.125 0 0 1 0 1.972l-11.54 6.347a1.125 1.125 0 0 1-1.667-.986V5.653Z" /></svg></div>
         </div>
 
-        <div class="overflow-hidden flex-shrink-0 w-30 h-48 md:h-52 rounded-lg">
+        <div class="group relative overflow-hidden rounded-lg transition-all duration-300 hover:-translate-y-1 hover:shadow-media cursor-pointer flex-shrink-0 w-30 h-48 md:h-52">
           <a href="#" class="relative">
             <img src="static/06.webp" alt="username" class="w-30 h-36 md:h-44 rounded-lg object-cover border border-gray-600">
           </a>
           <p class="p-2 text-sm truncate">Song's title 6</p>
+
+          <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-12 h-12 bg-white/70 rounded-full flex items-center justify-center opacity-0 transition-opacity duration-300 group-hover:opacity-100"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6 text-purple-600 fill-purple-600"><path stroke-linecap="round" stroke-linejoin="round" d="M5.25 5.653c0-.856.917-1.398 1.667-.986l11.54 6.347a1.125 1.125 0 0 1 0 1.972l-11.54 6.347a1.125 1.125 0 0 1-1.667-.986V5.653Z" /></svg></div>
         </div>
 
-        <div class="overflow-hidden flex-shrink-0 w-30 h-48 md:h-52 rounded-lg">
+        <div class="group relative overflow-hidden rounded-lg transition-all duration-300 hover:-translate-y-1 hover:shadow-media cursor-pointer flex-shrink-0 w-30 h-48 md:h-52">
           <a href="#" class="relative">
             <img src="static/07.webp" alt="username" class="w-30 h-36 md:h-44 rounded-lg object-cover border border-gray-600">
           </a>
           <p class="p-2 text-sm truncate">Song's title 7</p>
+
+          <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-12 h-12 bg-white/70 rounded-full flex items-center justify-center opacity-0 transition-opacity duration-300 group-hover:opacity-100"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6 text-purple-600 fill-purple-600"><path stroke-linecap="round" stroke-linejoin="round" d="M5.25 5.653c0-.856.917-1.398 1.667-.986l11.54 6.347a1.125 1.125 0 0 1 0 1.972l-11.54 6.347a1.125 1.125 0 0 1-1.667-.986V5.653Z" /></svg></div>
         </div>
 
-        <div class="overflow-hidden flex-shrink-0 w-30 h-48 md:h-52 rounded-lg">
+        <div class="group relative overflow-hidden rounded-lg transition-all duration-300 hover:-translate-y-1 hover:shadow-media cursor-pointer flex-shrink-0 w-30 h-48 md:h-52">
           <a href="#" class="relative">
             <img src="static/08.webp" alt="username" class="w-30 h-36 md:h-44 rounded-lg object-cover border border-gray-600">
           </a>
           <p class="p-2 text-sm truncate">Song's title 8</p>
+
+          <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-12 h-12 bg-white/70 rounded-full flex items-center justify-center opacity-0 transition-opacity duration-300 group-hover:opacity-100"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6 text-purple-600 fill-purple-600"><path stroke-linecap="round" stroke-linejoin="round" d="M5.25 5.653c0-.856.917-1.398 1.667-.986l11.54 6.347a1.125 1.125 0 0 1 0 1.972l-11.54 6.347a1.125 1.125 0 0 1-1.667-.986V5.653Z" /></svg></div>
         </div>
 
-        <div class="overflow-hidden flex-shrink-0 w-30 h-48 md:h-52 rounded-lg">
+        <div class="group relative overflow-hidden rounded-lg transition-all duration-300 hover:-translate-y-1 hover:shadow-media cursor-pointer flex-shrink-0 w-30 h-48 md:h-52">
           <a href="#" class="relative">
             <img src="static/09.webp" alt="username" class="w-30 h-36 md:h-44 rounded-lg object-cover border border-gray-600">
           </a>
           <p class="p-2 text-sm truncate">Song's title 9</p>
+
+          <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-12 h-12 bg-white/70 rounded-full flex items-center justify-center opacity-0 transition-opacity duration-300 group-hover:opacity-100"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6 text-purple-600 fill-purple-600"><path stroke-linecap="round" stroke-linejoin="round" d="M5.25 5.653c0-.856.917-1.398 1.667-.986l11.54 6.347a1.125 1.125 0 0 1 0 1.972l-11.54 6.347a1.125 1.125 0 0 1-1.667-.986V5.653Z" /></svg></div>
         </div>
 
-        <div class="overflow-hidden flex-shrink-0 w-30 h-48 md:h-52 rounded-lg">
+        <div class="group relative overflow-hidden rounded-lg transition-all duration-300 hover:-translate-y-1 hover:shadow-media cursor-pointer flex-shrink-0 w-30 h-48 md:h-52">
           <a href="#" class="relative">
             <img src="static/10.webp" alt="username" class="w-30 h-36 md:h-44 rounded-lg object-cover border border-gray-600">
           </a>
           <p class="p-2 text-sm truncate">Song's title 10</p>
+
+          <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-12 h-12 bg-white/70 rounded-full flex items-center justify-center opacity-0 transition-opacity duration-300 group-hover:opacity-100"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6 text-purple-600 fill-purple-600"><path stroke-linecap="round" stroke-linejoin="round" d="M5.25 5.653c0-.856.917-1.398 1.667-.986l11.54 6.347a1.125 1.125 0 0 1 0 1.972l-11.54 6.347a1.125 1.125 0 0 1-1.667-.986V5.653Z" /></svg></div>
         </div>
       </div>
     </section>
@@ -411,74 +475,94 @@
 
       <!-- Music Section -->
       <div id="stories-container" class="flex space-x-4 overflow-x-scroll scrollbar-hide no-scrollbar">
-        <div class="overflow-hidden flex-shrink-0 w-30 h-48 md:h-52 rounded-lg">
+        <div class="group relative overflow-hidden rounded-lg transition-all duration-300 hover:-translate-y-1 hover:shadow-media cursor-pointer flex-shrink-0 w-30 h-48 md:h-52">
           <a href="#" class="relative">
             <img src="static/01.webp" alt="username" class="w-30 h-36 md:h-44 rounded-lg object-cover border border-gray-600">
           </a>
           <p class="p-2 text-sm truncate">Song's title 1</p>
+
+          <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-12 h-12 bg-white/70 rounded-full flex items-center justify-center opacity-0 transition-opacity duration-300 group-hover:opacity-100"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6 text-purple-600 fill-purple-600"><path stroke-linecap="round" stroke-linejoin="round" d="M5.25 5.653c0-.856.917-1.398 1.667-.986l11.54 6.347a1.125 1.125 0 0 1 0 1.972l-11.54 6.347a1.125 1.125 0 0 1-1.667-.986V5.653Z" /></svg></div>
         </div>
 
-        <div class="overflow-hidden flex-shrink-0 w-30 h-48 md:h-52 rounded-lg">
+        <div class="group relative overflow-hidden rounded-lg transition-all duration-300 hover:-translate-y-1 hover:shadow-media cursor-pointer flex-shrink-0 w-30 h-48 md:h-52">
           <a href="#" class="relative">
             <img src="static/02.webp" alt="username" class="w-30 h-36 md:h-44 rounded-lg object-cover border border-gray-600">
           </a>
           <p class="p-2 text-sm truncate">Song's title 2</p>
+
+          <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-12 h-12 bg-white/70 rounded-full flex items-center justify-center opacity-0 transition-opacity duration-300 group-hover:opacity-100"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6 text-purple-600 fill-purple-600"><path stroke-linecap="round" stroke-linejoin="round" d="M5.25 5.653c0-.856.917-1.398 1.667-.986l11.54 6.347a1.125 1.125 0 0 1 0 1.972l-11.54 6.347a1.125 1.125 0 0 1-1.667-.986V5.653Z" /></svg></div>
         </div>
 
-        <div class="overflow-hidden flex-shrink-0 w-30 h-48 md:h-52 rounded-lg">
+        <div class="group relative overflow-hidden rounded-lg transition-all duration-300 hover:-translate-y-1 hover:shadow-media cursor-pointer flex-shrink-0 w-30 h-48 md:h-52">
           <a href="#" class="relative">
             <img src="static/03.webp" alt="username" class="w-30 h-36 md:h-44 rounded-lg object-cover border border-gray-600">
           </a>
           <p class="p-2 text-sm truncate">Song's title 3</p>
+
+          <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-12 h-12 bg-white/70 rounded-full flex items-center justify-center opacity-0 transition-opacity duration-300 group-hover:opacity-100"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6 text-purple-600 fill-purple-600"><path stroke-linecap="round" stroke-linejoin="round" d="M5.25 5.653c0-.856.917-1.398 1.667-.986l11.54 6.347a1.125 1.125 0 0 1 0 1.972l-11.54 6.347a1.125 1.125 0 0 1-1.667-.986V5.653Z" /></svg></div>
         </div>
 
-        <div class="overflow-hidden flex-shrink-0 w-30 h-48 md:h-52 rounded-lg">
+        <div class="group relative overflow-hidden rounded-lg transition-all duration-300 hover:-translate-y-1 hover:shadow-media cursor-pointer flex-shrink-0 w-30 h-48 md:h-52">
           <a href="#" class="relative">
             <img src="static/04.webp" alt="username" class="w-30 h-36 md:h-44 rounded-lg object-cover border border-gray-600">
           </a>
           <p class="p-2 text-sm truncate">Song's title 4</p>
+
+          <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-12 h-12 bg-white/70 rounded-full flex items-center justify-center opacity-0 transition-opacity duration-300 group-hover:opacity-100"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6 text-purple-600 fill-purple-600"><path stroke-linecap="round" stroke-linejoin="round" d="M5.25 5.653c0-.856.917-1.398 1.667-.986l11.54 6.347a1.125 1.125 0 0 1 0 1.972l-11.54 6.347a1.125 1.125 0 0 1-1.667-.986V5.653Z" /></svg></div>
         </div>
 
-        <div class="overflow-hidden flex-shrink-0 w-30 h-48 md:h-52 rounded-lg">
+        <div class="group relative overflow-hidden rounded-lg transition-all duration-300 hover:-translate-y-1 hover:shadow-media cursor-pointer flex-shrink-0 w-30 h-48 md:h-52">
           <a href="#" class="relative">
             <img src="static/05.webp" alt="username" class="w-30 h-36 md:h-44 rounded-lg object-cover border border-gray-600">
           </a>
           <p class="p-2 text-sm truncate">Song's title 5</p>
+
+          <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-12 h-12 bg-white/70 rounded-full flex items-center justify-center opacity-0 transition-opacity duration-300 group-hover:opacity-100"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6 text-purple-600 fill-purple-600"><path stroke-linecap="round" stroke-linejoin="round" d="M5.25 5.653c0-.856.917-1.398 1.667-.986l11.54 6.347a1.125 1.125 0 0 1 0 1.972l-11.54 6.347a1.125 1.125 0 0 1-1.667-.986V5.653Z" /></svg></div>
         </div>
 
-        <div class="overflow-hidden flex-shrink-0 w-30 h-48 md:h-52 rounded-lg">
+        <div class="group relative overflow-hidden rounded-lg transition-all duration-300 hover:-translate-y-1 hover:shadow-media cursor-pointer flex-shrink-0 w-30 h-48 md:h-52">
           <a href="#" class="relative">
             <img src="static/06.webp" alt="username" class="w-30 h-36 md:h-44 rounded-lg object-cover border border-gray-600">
           </a>
           <p class="p-2 text-sm truncate">Song's title 6</p>
+
+          <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-12 h-12 bg-white/70 rounded-full flex items-center justify-center opacity-0 transition-opacity duration-300 group-hover:opacity-100"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6 text-purple-600 fill-purple-600"><path stroke-linecap="round" stroke-linejoin="round" d="M5.25 5.653c0-.856.917-1.398 1.667-.986l11.54 6.347a1.125 1.125 0 0 1 0 1.972l-11.54 6.347a1.125 1.125 0 0 1-1.667-.986V5.653Z" /></svg></div>
         </div>
 
-        <div class="overflow-hidden flex-shrink-0 w-30 h-48 md:h-52 rounded-lg">
+        <div class="group relative overflow-hidden rounded-lg transition-all duration-300 hover:-translate-y-1 hover:shadow-media cursor-pointer flex-shrink-0 w-30 h-48 md:h-52">
           <a href="#" class="relative">
             <img src="static/07.webp" alt="username" class="w-30 h-36 md:h-44 rounded-lg object-cover border border-gray-600">
           </a>
           <p class="p-2 text-sm truncate">Song's title 7</p>
+
+          <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-12 h-12 bg-white/70 rounded-full flex items-center justify-center opacity-0 transition-opacity duration-300 group-hover:opacity-100"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6 text-purple-600 fill-purple-600"><path stroke-linecap="round" stroke-linejoin="round" d="M5.25 5.653c0-.856.917-1.398 1.667-.986l11.54 6.347a1.125 1.125 0 0 1 0 1.972l-11.54 6.347a1.125 1.125 0 0 1-1.667-.986V5.653Z" /></svg></div>
         </div>
 
-        <div class="overflow-hidden flex-shrink-0 w-30 h-48 md:h-52 rounded-lg">
+        <div class="group relative overflow-hidden rounded-lg transition-all duration-300 hover:-translate-y-1 hover:shadow-media cursor-pointer flex-shrink-0 w-30 h-48 md:h-52">
           <a href="#" class="relative">
             <img src="static/08.webp" alt="username" class="w-30 h-36 md:h-44 rounded-lg object-cover border border-gray-600">
           </a>
           <p class="p-2 text-sm truncate">Song's title 8</p>
+
+          <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-12 h-12 bg-white/70 rounded-full flex items-center justify-center opacity-0 transition-opacity duration-300 group-hover:opacity-100"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6 text-purple-600 fill-purple-600"><path stroke-linecap="round" stroke-linejoin="round" d="M5.25 5.653c0-.856.917-1.398 1.667-.986l11.54 6.347a1.125 1.125 0 0 1 0 1.972l-11.54 6.347a1.125 1.125 0 0 1-1.667-.986V5.653Z" /></svg></div>
         </div>
 
-        <div class="overflow-hidden flex-shrink-0 w-30 h-48 md:h-52 rounded-lg">
+        <div class="group relative overflow-hidden rounded-lg transition-all duration-300 hover:-translate-y-1 hover:shadow-media cursor-pointer flex-shrink-0 w-30 h-48 md:h-52">
           <a href="#" class="relative">
             <img src="static/09.webp" alt="username" class="w-30 h-36 md:h-44 rounded-lg object-cover border border-gray-600">
           </a>
           <p class="p-2 text-sm truncate">Song's title 9</p>
+
+          <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-12 h-12 bg-white/70 rounded-full flex items-center justify-center opacity-0 transition-opacity duration-300 group-hover:opacity-100"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6 text-purple-600 fill-purple-600"><path stroke-linecap="round" stroke-linejoin="round" d="M5.25 5.653c0-.856.917-1.398 1.667-.986l11.54 6.347a1.125 1.125 0 0 1 0 1.972l-11.54 6.347a1.125 1.125 0 0 1-1.667-.986V5.653Z" /></svg></div>
         </div>
 
-        <div class="overflow-hidden flex-shrink-0 w-30 h-48 md:h-52 rounded-lg">
+        <div class="group relative overflow-hidden rounded-lg transition-all duration-300 hover:-translate-y-1 hover:shadow-media cursor-pointer flex-shrink-0 w-30 h-48 md:h-52">
           <a href="#" class="relative">
             <img src="static/10.webp" alt="username" class="w-30 h-36 md:h-44 rounded-lg object-cover border border-gray-600">
           </a>
           <p class="p-2 text-sm truncate">Song's title 10</p>
+
+          <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-12 h-12 bg-white/70 rounded-full flex items-center justify-center opacity-0 transition-opacity duration-300 group-hover:opacity-100"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6 text-purple-600 fill-purple-600"><path stroke-linecap="round" stroke-linejoin="round" d="M5.25 5.653c0-.856.917-1.398 1.667-.986l11.54 6.347a1.125 1.125 0 0 1 0 1.972l-11.54 6.347a1.125 1.125 0 0 1-1.667-.986V5.653Z" /></svg></div>
         </div>
       </div>
     </section>
@@ -506,74 +590,94 @@
 
       <!-- Music Section -->
       <div id="stories-container" class="flex space-x-4 overflow-x-scroll scrollbar-hide no-scrollbar">
-        <div class="overflow-hidden flex-shrink-0 w-30 h-48 md:h-52 rounded-lg">
+        <div class="group relative overflow-hidden rounded-lg transition-all duration-300 hover:-translate-y-1 hover:shadow-media cursor-pointer flex-shrink-0 w-30 h-48 md:h-52">
           <a href="#" class="relative">
             <img src="static/01.webp" alt="username" class="w-30 h-36 md:h-44 rounded-lg object-cover border border-gray-600">
           </a>
           <p class="p-2 text-sm truncate">Song's title 1</p>
+
+          <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-12 h-12 bg-white/70 rounded-full flex items-center justify-center opacity-0 transition-opacity duration-300 group-hover:opacity-100"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6 text-purple-600 fill-purple-600"><path stroke-linecap="round" stroke-linejoin="round" d="M5.25 5.653c0-.856.917-1.398 1.667-.986l11.54 6.347a1.125 1.125 0 0 1 0 1.972l-11.54 6.347a1.125 1.125 0 0 1-1.667-.986V5.653Z" /></svg></div>
         </div>
 
-        <div class="overflow-hidden flex-shrink-0 w-30 h-48 md:h-52 rounded-lg">
+        <div class="group relative overflow-hidden rounded-lg transition-all duration-300 hover:-translate-y-1 hover:shadow-media cursor-pointer flex-shrink-0 w-30 h-48 md:h-52">
           <a href="#" class="relative">
             <img src="static/02.webp" alt="username" class="w-30 h-36 md:h-44 rounded-lg object-cover border border-gray-600">
           </a>
           <p class="p-2 text-sm truncate">Song's title 2</p>
+
+          <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-12 h-12 bg-white/70 rounded-full flex items-center justify-center opacity-0 transition-opacity duration-300 group-hover:opacity-100"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6 text-purple-600 fill-purple-600"><path stroke-linecap="round" stroke-linejoin="round" d="M5.25 5.653c0-.856.917-1.398 1.667-.986l11.54 6.347a1.125 1.125 0 0 1 0 1.972l-11.54 6.347a1.125 1.125 0 0 1-1.667-.986V5.653Z" /></svg></div>
         </div>
 
-        <div class="overflow-hidden flex-shrink-0 w-30 h-48 md:h-52 rounded-lg">
+        <div class="group relative overflow-hidden rounded-lg transition-all duration-300 hover:-translate-y-1 hover:shadow-media cursor-pointer flex-shrink-0 w-30 h-48 md:h-52">
           <a href="#" class="relative">
             <img src="static/03.webp" alt="username" class="w-30 h-36 md:h-44 rounded-lg object-cover border border-gray-600">
           </a>
           <p class="p-2 text-sm truncate">Song's title 3</p>
+
+          <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-12 h-12 bg-white/70 rounded-full flex items-center justify-center opacity-0 transition-opacity duration-300 group-hover:opacity-100"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6 text-purple-600 fill-purple-600"><path stroke-linecap="round" stroke-linejoin="round" d="M5.25 5.653c0-.856.917-1.398 1.667-.986l11.54 6.347a1.125 1.125 0 0 1 0 1.972l-11.54 6.347a1.125 1.125 0 0 1-1.667-.986V5.653Z" /></svg></div>
         </div>
 
-        <div class="overflow-hidden flex-shrink-0 w-30 h-48 md:h-52 rounded-lg">
+        <div class="group relative overflow-hidden rounded-lg transition-all duration-300 hover:-translate-y-1 hover:shadow-media cursor-pointer flex-shrink-0 w-30 h-48 md:h-52">
           <a href="#" class="relative">
             <img src="static/04.webp" alt="username" class="w-30 h-36 md:h-44 rounded-lg object-cover border border-gray-600">
           </a>
           <p class="p-2 text-sm truncate">Song's title 4</p>
+
+          <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-12 h-12 bg-white/70 rounded-full flex items-center justify-center opacity-0 transition-opacity duration-300 group-hover:opacity-100"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6 text-purple-600 fill-purple-600"><path stroke-linecap="round" stroke-linejoin="round" d="M5.25 5.653c0-.856.917-1.398 1.667-.986l11.54 6.347a1.125 1.125 0 0 1 0 1.972l-11.54 6.347a1.125 1.125 0 0 1-1.667-.986V5.653Z" /></svg></div>
         </div>
 
-        <div class="overflow-hidden flex-shrink-0 w-30 h-48 md:h-52 rounded-lg">
+        <div class="group relative overflow-hidden rounded-lg transition-all duration-300 hover:-translate-y-1 hover:shadow-media cursor-pointer flex-shrink-0 w-30 h-48 md:h-52">
           <a href="#" class="relative">
             <img src="static/05.webp" alt="username" class="w-30 h-36 md:h-44 rounded-lg object-cover border border-gray-600">
           </a>
           <p class="p-2 text-sm truncate">Song's title 5</p>
+
+          <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-12 h-12 bg-white/70 rounded-full flex items-center justify-center opacity-0 transition-opacity duration-300 group-hover:opacity-100"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6 text-purple-600 fill-purple-600"><path stroke-linecap="round" stroke-linejoin="round" d="M5.25 5.653c0-.856.917-1.398 1.667-.986l11.54 6.347a1.125 1.125 0 0 1 0 1.972l-11.54 6.347a1.125 1.125 0 0 1-1.667-.986V5.653Z" /></svg></div>
         </div>
 
-        <div class="overflow-hidden flex-shrink-0 w-30 h-48 md:h-52 rounded-lg">
+        <div class="group relative overflow-hidden rounded-lg transition-all duration-300 hover:-translate-y-1 hover:shadow-media cursor-pointer flex-shrink-0 w-30 h-48 md:h-52">
           <a href="#" class="relative">
             <img src="static/06.webp" alt="username" class="w-30 h-36 md:h-44 rounded-lg object-cover border border-gray-600">
           </a>
           <p class="p-2 text-sm truncate">Song's title 6</p>
+
+          <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-12 h-12 bg-white/70 rounded-full flex items-center justify-center opacity-0 transition-opacity duration-300 group-hover:opacity-100"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6 text-purple-600 fill-purple-600"><path stroke-linecap="round" stroke-linejoin="round" d="M5.25 5.653c0-.856.917-1.398 1.667-.986l11.54 6.347a1.125 1.125 0 0 1 0 1.972l-11.54 6.347a1.125 1.125 0 0 1-1.667-.986V5.653Z" /></svg></div>
         </div>
 
-        <div class="overflow-hidden flex-shrink-0 w-30 h-48 md:h-52 rounded-lg">
+        <div class="group relative overflow-hidden rounded-lg transition-all duration-300 hover:-translate-y-1 hover:shadow-media cursor-pointer flex-shrink-0 w-30 h-48 md:h-52">
           <a href="#" class="relative">
             <img src="static/07.webp" alt="username" class="w-30 h-36 md:h-44 rounded-lg object-cover border border-gray-600">
           </a>
           <p class="p-2 text-sm truncate">Song's title 7</p>
+
+          <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-12 h-12 bg-white/70 rounded-full flex items-center justify-center opacity-0 transition-opacity duration-300 group-hover:opacity-100"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6 text-purple-600 fill-purple-600"><path stroke-linecap="round" stroke-linejoin="round" d="M5.25 5.653c0-.856.917-1.398 1.667-.986l11.54 6.347a1.125 1.125 0 0 1 0 1.972l-11.54 6.347a1.125 1.125 0 0 1-1.667-.986V5.653Z" /></svg></div>
         </div>
 
-        <div class="overflow-hidden flex-shrink-0 w-30 h-48 md:h-52 rounded-lg">
+        <div class="group relative overflow-hidden rounded-lg transition-all duration-300 hover:-translate-y-1 hover:shadow-media cursor-pointer flex-shrink-0 w-30 h-48 md:h-52">
           <a href="#" class="relative">
             <img src="static/08.webp" alt="username" class="w-30 h-36 md:h-44 rounded-lg object-cover border border-gray-600">
           </a>
           <p class="p-2 text-sm truncate">Song's title 8</p>
+
+          <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-12 h-12 bg-white/70 rounded-full flex items-center justify-center opacity-0 transition-opacity duration-300 group-hover:opacity-100"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6 text-purple-600 fill-purple-600"><path stroke-linecap="round" stroke-linejoin="round" d="M5.25 5.653c0-.856.917-1.398 1.667-.986l11.54 6.347a1.125 1.125 0 0 1 0 1.972l-11.54 6.347a1.125 1.125 0 0 1-1.667-.986V5.653Z" /></svg></div>
         </div>
 
-        <div class="overflow-hidden flex-shrink-0 w-30 h-48 md:h-52 rounded-lg">
+        <div class="group relative overflow-hidden rounded-lg transition-all duration-300 hover:-translate-y-1 hover:shadow-media cursor-pointer flex-shrink-0 w-30 h-48 md:h-52">
           <a href="#" class="relative">
             <img src="static/09.webp" alt="username" class="w-30 h-36 md:h-44 rounded-lg object-cover border border-gray-600">
           </a>
           <p class="p-2 text-sm truncate">Song's title 9</p>
+
+          <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-12 h-12 bg-white/70 rounded-full flex items-center justify-center opacity-0 transition-opacity duration-300 group-hover:opacity-100"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6 text-purple-600 fill-purple-600"><path stroke-linecap="round" stroke-linejoin="round" d="M5.25 5.653c0-.856.917-1.398 1.667-.986l11.54 6.347a1.125 1.125 0 0 1 0 1.972l-11.54 6.347a1.125 1.125 0 0 1-1.667-.986V5.653Z" /></svg></div>
         </div>
 
-        <div class="overflow-hidden flex-shrink-0 w-30 h-48 md:h-52 rounded-lg">
+        <div class="group relative overflow-hidden rounded-lg transition-all duration-300 hover:-translate-y-1 hover:shadow-media cursor-pointer flex-shrink-0 w-30 h-48 md:h-52">
           <a href="#" class="relative">
             <img src="static/10.webp" alt="username" class="w-30 h-36 md:h-44 rounded-lg object-cover border border-gray-600">
           </a>
           <p class="p-2 text-sm truncate">Song's title 10</p>
+
+          <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-12 h-12 bg-white/70 rounded-full flex items-center justify-center opacity-0 transition-opacity duration-300 group-hover:opacity-100"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6 text-purple-600 fill-purple-600"><path stroke-linecap="round" stroke-linejoin="round" d="M5.25 5.653c0-.856.917-1.398 1.667-.986l11.54 6.347a1.125 1.125 0 0 1 0 1.972l-11.54 6.347a1.125 1.125 0 0 1-1.667-.986V5.653Z" /></svg></div>
         </div>
       </div>
     </section>
@@ -601,74 +705,94 @@
 
       <!-- Music Section -->
       <div id="stories-container" class="flex space-x-4 overflow-x-scroll scrollbar-hide no-scrollbar">
-        <div class="overflow-hidden flex-shrink-0 w-30 h-48 md:h-52 rounded-lg">
+        <div class="group relative overflow-hidden rounded-lg transition-all duration-300 hover:-translate-y-1 hover:shadow-media cursor-pointer flex-shrink-0 w-30 h-48 md:h-52">
           <a href="#" class="relative">
             <img src="static/01.webp" alt="username" class="w-30 h-36 md:h-44 rounded-lg object-cover border border-gray-600">
           </a>
           <p class="p-2 text-sm truncate">Song's title 1</p>
+
+          <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-12 h-12 bg-white/70 rounded-full flex items-center justify-center opacity-0 transition-opacity duration-300 group-hover:opacity-100"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6 text-purple-600 fill-purple-600"><path stroke-linecap="round" stroke-linejoin="round" d="M5.25 5.653c0-.856.917-1.398 1.667-.986l11.54 6.347a1.125 1.125 0 0 1 0 1.972l-11.54 6.347a1.125 1.125 0 0 1-1.667-.986V5.653Z" /></svg></div>
         </div>
 
-        <div class="overflow-hidden flex-shrink-0 w-30 h-48 md:h-52 rounded-lg">
+        <div class="group relative overflow-hidden rounded-lg transition-all duration-300 hover:-translate-y-1 hover:shadow-media cursor-pointer flex-shrink-0 w-30 h-48 md:h-52">
           <a href="#" class="relative">
             <img src="static/02.webp" alt="username" class="w-30 h-36 md:h-44 rounded-lg object-cover border border-gray-600">
           </a>
           <p class="p-2 text-sm truncate">Song's title 2</p>
+
+          <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-12 h-12 bg-white/70 rounded-full flex items-center justify-center opacity-0 transition-opacity duration-300 group-hover:opacity-100"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6 text-purple-600 fill-purple-600"><path stroke-linecap="round" stroke-linejoin="round" d="M5.25 5.653c0-.856.917-1.398 1.667-.986l11.54 6.347a1.125 1.125 0 0 1 0 1.972l-11.54 6.347a1.125 1.125 0 0 1-1.667-.986V5.653Z" /></svg></div>
         </div>
 
-        <div class="overflow-hidden flex-shrink-0 w-30 h-48 md:h-52 rounded-lg">
+        <div class="group relative overflow-hidden rounded-lg transition-all duration-300 hover:-translate-y-1 hover:shadow-media cursor-pointer flex-shrink-0 w-30 h-48 md:h-52">
           <a href="#" class="relative">
             <img src="static/03.webp" alt="username" class="w-30 h-36 md:h-44 rounded-lg object-cover border border-gray-600">
           </a>
           <p class="p-2 text-sm truncate">Song's title 3</p>
+
+          <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-12 h-12 bg-white/70 rounded-full flex items-center justify-center opacity-0 transition-opacity duration-300 group-hover:opacity-100"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6 text-purple-600 fill-purple-600"><path stroke-linecap="round" stroke-linejoin="round" d="M5.25 5.653c0-.856.917-1.398 1.667-.986l11.54 6.347a1.125 1.125 0 0 1 0 1.972l-11.54 6.347a1.125 1.125 0 0 1-1.667-.986V5.653Z" /></svg></div>
         </div>
 
-        <div class="overflow-hidden flex-shrink-0 w-30 h-48 md:h-52 rounded-lg">
+        <div class="group relative overflow-hidden rounded-lg transition-all duration-300 hover:-translate-y-1 hover:shadow-media cursor-pointer flex-shrink-0 w-30 h-48 md:h-52">
           <a href="#" class="relative">
             <img src="static/04.webp" alt="username" class="w-30 h-36 md:h-44 rounded-lg object-cover border border-gray-600">
           </a>
           <p class="p-2 text-sm truncate">Song's title 4</p>
+
+          <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-12 h-12 bg-white/70 rounded-full flex items-center justify-center opacity-0 transition-opacity duration-300 group-hover:opacity-100"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6 text-purple-600 fill-purple-600"><path stroke-linecap="round" stroke-linejoin="round" d="M5.25 5.653c0-.856.917-1.398 1.667-.986l11.54 6.347a1.125 1.125 0 0 1 0 1.972l-11.54 6.347a1.125 1.125 0 0 1-1.667-.986V5.653Z" /></svg></div>
         </div>
 
-        <div class="overflow-hidden flex-shrink-0 w-30 h-48 md:h-52 rounded-lg">
+        <div class="group relative overflow-hidden rounded-lg transition-all duration-300 hover:-translate-y-1 hover:shadow-media cursor-pointer flex-shrink-0 w-30 h-48 md:h-52">
           <a href="#" class="relative">
             <img src="static/05.webp" alt="username" class="w-30 h-36 md:h-44 rounded-lg object-cover border border-gray-600">
           </a>
           <p class="p-2 text-sm truncate">Song's title 5</p>
+
+          <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-12 h-12 bg-white/70 rounded-full flex items-center justify-center opacity-0 transition-opacity duration-300 group-hover:opacity-100"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6 text-purple-600 fill-purple-600"><path stroke-linecap="round" stroke-linejoin="round" d="M5.25 5.653c0-.856.917-1.398 1.667-.986l11.54 6.347a1.125 1.125 0 0 1 0 1.972l-11.54 6.347a1.125 1.125 0 0 1-1.667-.986V5.653Z" /></svg></div>
         </div>
 
-        <div class="overflow-hidden flex-shrink-0 w-30 h-48 md:h-52 rounded-lg">
+        <div class="group relative overflow-hidden rounded-lg transition-all duration-300 hover:-translate-y-1 hover:shadow-media cursor-pointer flex-shrink-0 w-30 h-48 md:h-52">
           <a href="#" class="relative">
             <img src="static/06.webp" alt="username" class="w-30 h-36 md:h-44 rounded-lg object-cover border border-gray-600">
           </a>
           <p class="p-2 text-sm truncate">Song's title 6</p>
+
+          <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-12 h-12 bg-white/70 rounded-full flex items-center justify-center opacity-0 transition-opacity duration-300 group-hover:opacity-100"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6 text-purple-600 fill-purple-600"><path stroke-linecap="round" stroke-linejoin="round" d="M5.25 5.653c0-.856.917-1.398 1.667-.986l11.54 6.347a1.125 1.125 0 0 1 0 1.972l-11.54 6.347a1.125 1.125 0 0 1-1.667-.986V5.653Z" /></svg></div>
         </div>
 
-        <div class="overflow-hidden flex-shrink-0 w-30 h-48 md:h-52 rounded-lg">
+        <div class="group relative overflow-hidden rounded-lg transition-all duration-300 hover:-translate-y-1 hover:shadow-media cursor-pointer flex-shrink-0 w-30 h-48 md:h-52">
           <a href="#" class="relative">
             <img src="static/07.webp" alt="username" class="w-30 h-36 md:h-44 rounded-lg object-cover border border-gray-600">
           </a>
           <p class="p-2 text-sm truncate">Song's title 7</p>
+
+          <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-12 h-12 bg-white/70 rounded-full flex items-center justify-center opacity-0 transition-opacity duration-300 group-hover:opacity-100"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6 text-purple-600 fill-purple-600"><path stroke-linecap="round" stroke-linejoin="round" d="M5.25 5.653c0-.856.917-1.398 1.667-.986l11.54 6.347a1.125 1.125 0 0 1 0 1.972l-11.54 6.347a1.125 1.125 0 0 1-1.667-.986V5.653Z" /></svg></div>
         </div>
 
-        <div class="overflow-hidden flex-shrink-0 w-30 h-48 md:h-52 rounded-lg">
+        <div class="group relative overflow-hidden rounded-lg transition-all duration-300 hover:-translate-y-1 hover:shadow-media cursor-pointer flex-shrink-0 w-30 h-48 md:h-52">
           <a href="#" class="relative">
             <img src="static/08.webp" alt="username" class="w-30 h-36 md:h-44 rounded-lg object-cover border border-gray-600">
           </a>
           <p class="p-2 text-sm truncate">Song's title 8</p>
+
+          <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-12 h-12 bg-white/70 rounded-full flex items-center justify-center opacity-0 transition-opacity duration-300 group-hover:opacity-100"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6 text-purple-600 fill-purple-600"><path stroke-linecap="round" stroke-linejoin="round" d="M5.25 5.653c0-.856.917-1.398 1.667-.986l11.54 6.347a1.125 1.125 0 0 1 0 1.972l-11.54 6.347a1.125 1.125 0 0 1-1.667-.986V5.653Z" /></svg></div>
         </div>
 
-        <div class="overflow-hidden flex-shrink-0 w-30 h-48 md:h-52 rounded-lg">
+        <div class="group relative overflow-hidden rounded-lg transition-all duration-300 hover:-translate-y-1 hover:shadow-media cursor-pointer flex-shrink-0 w-30 h-48 md:h-52">
           <a href="#" class="relative">
             <img src="static/09.webp" alt="username" class="w-30 h-36 md:h-44 rounded-lg object-cover border border-gray-600">
           </a>
           <p class="p-2 text-sm truncate">Song's title 9</p>
+
+          <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-12 h-12 bg-white/70 rounded-full flex items-center justify-center opacity-0 transition-opacity duration-300 group-hover:opacity-100"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6 text-purple-600 fill-purple-600"><path stroke-linecap="round" stroke-linejoin="round" d="M5.25 5.653c0-.856.917-1.398 1.667-.986l11.54 6.347a1.125 1.125 0 0 1 0 1.972l-11.54 6.347a1.125 1.125 0 0 1-1.667-.986V5.653Z" /></svg></div>
         </div>
 
-        <div class="overflow-hidden flex-shrink-0 w-30 h-48 md:h-52 rounded-lg">
+        <div class="group relative overflow-hidden rounded-lg transition-all duration-300 hover:-translate-y-1 hover:shadow-media cursor-pointer flex-shrink-0 w-30 h-48 md:h-52">
           <a href="#" class="relative">
             <img src="static/10.webp" alt="username" class="w-30 h-36 md:h-44 rounded-lg object-cover border border-gray-600">
           </a>
           <p class="p-2 text-sm truncate">Song's title 10</p>
+
+          <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-12 h-12 bg-white/70 rounded-full flex items-center justify-center opacity-0 transition-opacity duration-300 group-hover:opacity-100"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6 text-purple-600 fill-purple-600"><path stroke-linecap="round" stroke-linejoin="round" d="M5.25 5.653c0-.856.917-1.398 1.667-.986l11.54 6.347a1.125 1.125 0 0 1 0 1.972l-11.54 6.347a1.125 1.125 0 0 1-1.667-.986V5.653Z" /></svg></div>
         </div>
       </div>
     </section>
@@ -690,6 +814,27 @@
     });
   </script>
   <script src="https://cdn.jsdelivr.net/npm/flowbite@3.1.2/dist/flowbite.min.js"></script>
+
+
+  <!-- GLightbox Script -->
+  <script src="https://cdn.jsdelivr.net/gh/mcstudios/glightbox/dist/js/glightbox.min.js"></script>
+
+  <script>
+    // Initialize GLightbox
+    const lightbox = GLightbox({
+      selector: '.glightbox',
+      touchNavigation: true,
+      loop: true,
+      autoplayVideos: true,
+      zoomable: true,
+      plyr: {
+        config: {
+          controls: ['play-large', 'play', 'progress', 'current-time', 'mute', 'volume', 'fullscreen'],
+          hideControls: false
+        }
+      }
+    });
+  </script>
 
 </body>
 </html>
