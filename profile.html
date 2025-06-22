@@ -106,24 +106,28 @@
 
   <!-- Main -->
   <main class="p-4 md:ml-64 h-auto pt-20">
-    <section class="sm:flex sm:gap-5 items-center space-x-3 py-2 mb-6">
-      <div class="flex-shrink-0 w-full mb-6 h-70 sm:h-32 sm:w-32 sm:mb-0">
-        <img class="object-cover object-center w-full h-full rounded-lg border" src="static/avatar.webp" alt="Vendor"/>
-      </div>
-      <div class="flex flex-col">
-        <div class="mb-1 space-y-1">
-          <h2 class="text-lg md:text-2xl font-bold text-white">Starking Boycrak</h2>
-          <p class="font-bold text-gray-300">Artist</p>
-          <div id="followers-number" class="flex items-center gap-2 text-sm">
-            <span class="font-bold">54k fans &bull; 12 songs</span>
+    <!-- Card Example (Repeat for more) -->
+      <section class="group relative overflow-hidden rounded-t-lg transition-all duration-300 hover:-translate-y-1 hover:shadow-media cursor-pointer mb-6">
+        <a href="static/house01.avif" class="glightbox">
+          <img src="static/cover.webp" alt="Gallery Image" class="w-full h-56 object-cover object-center aspect-auto rounded-t-lg transition-transform duration-500 ease-in-out group-hover:scale-105" />
+        </a>
+        <div class="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black via-black/50 to-transparent px-4 pt-8 pb-4 text-white">
+          <div class="flex items-center space-x-4">
+            <div class="flex-shrink-0">
+              <img class="object-cover object-center w-16 h-16 rounded-lg" src="static/avatar.webp" alt="Vendor"/>
+            </div>
+            <div class="flex flex-col">
+              <h2 class="text-sm md:text-lg font-bold text-white">Starking Boycrak</h2>
+              <span class="font-semibold text-xs text-gray-400">54k fans &bull; 12 songs</span>
+
+              <div class="mt-2">
+                <button type="button" class="px-4 py-1 bg-purple-600 text-white rounded-full hover:bg-purple-700 transition-all text-sm">Follow</button>
+              </div>
+            </div>
           </div>
         </div>
+      </section>
 
-        <div class="mt-2 text-gray-500">
-          <button type="button" class="px-4 py-1.5 bg-purple-600 text-white rounded-lg hover:bg-purple-700 transition-all">Follow</button>
-        </div>
-      </div>
-    </section>
 
     <h2 class="text-xl font-bold mb-4">12 songs</h2>
     <section class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-4 md:gap-6 mb-8">
