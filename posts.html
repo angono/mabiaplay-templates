@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Mabiaplay</title>
+  <!-- Tailwind CSS via CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- Include GLightbox CSS -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/glightbox/dist/css/glightbox.min.css">
+
+  <!-- Font Awesome CDN -->
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
+    integrity="sha512-HHsOCp2q4Y4k0F6VYGm3f7emzcU0P4DvP6/Q60tMqhljeS1c+gIu6N+VPlrF7s/okXvjIivkm1XxJ8j4FJZfPg=="
+    crossorigin="anonymous"
+    referrerpolicy="no-referrer"/>
+
+  <style type="text/css">
+    /* Hide scrollbar in Chrome, Safari, and Opera */
+  .no-scrollbar::-webkit-scrollbar {
+    display: none;
+  }
+
+  /* Hide scrollbar in IE, Edge, and Firefox */
+  .no-scrollbar {
+    -ms-overflow-style: none; /* IE and Edge */
+    scrollbar-width: none; /* Firefox */
+  }
+  </style>
+
+</head>
+<body class="bg-black text-white font-sans antialiased">
+  <!-- Navbar -->
+  <nav class="bg-[#111] border-b border-gray-800 px-2 md:px-4 py-2 fixed left-0 right-0 top-0 z-50">
+    <div class="flex flex-wrap justify-between items-center">
+      <div class="flex justify-start items-center">
+        <button
+          data-drawer-target="drawer-navigation"
+          data-drawer-toggle="drawer-navigation"
+          aria-controls="drawer-navigation"
+          class="p-2 mr-2 md:hidden text-purple-600 rounded-lg cursor-pointer hover:text-white hover:bg-purple-600">
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6"><path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" /></svg>
+          </svg>
+        </button>
+
+        <a href="index.html" class="flex items-center gap-2">
+          <img src="static/logo.png" alt="Mabiaplay" class="h-6">
+          <span class="text-xl font-bold">Mabiaplay</span>
+        </a>
+        <form action="#" method="GET" class="hidden md:block md:pl-3">
+          <div class="relative w-64">
+            <div class="flex absolute inset-y-0 left-0 items-center pl-3 pointer-events-none">
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-5 text-purple-600"><path stroke-linecap="round" stroke-linejoin="round" d="m21 21-5.197-5.197m0 0A7.5 7.5 0 1 0 5.196 5.196a7.5 7.5 0 0 0 10.607 10.607Z" /></svg>
+            </div>
+            <input type="text" name="search" id="topbar-search" class="bg-gray-50 text-sm rounded-full px-4 py-1.5 text-black w-72 outline-none block w-full pl-10" placeholder="Search Artists, Songs, Albums, Videos"/>
+          </div>
+        </form>
+      </div>
+
+      <div class="flex items-center lg:order-2 space-x-2 md:space-x-4">
+
+        <button class="hidden md:block bg-[#00f5cc] text-black font-semibold px-4 py-1 rounded-full">Get Bcoins →</button>
+        <a href="#" type="button" class="bg-purple-600 text-white font-bold px-5 py-1 rounded-full transition-all duration-300">Download</a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Sidebar -->
+  <aside class="fixed top-0 left-0 z-40 w-64 h-screen pt-14 bg-[#0a0a0a] transition-transform -translate-x-full md:translate-x-0" aria-label="Sidenav" id="drawer-navigation">
+    <div class="overflow-y-auto py-5 px-5 h-full items-start space-y-6 text-sm">
+
+      <div class="flex items-center space-x-2">
+        <div class="w-8 h-8 rounded-full bg-gray-600"></div>
+        <a href="profile.html" class="text-gray-300 hover:text-white">Log in / Sign up</a>
+      </div>
+
+      <div>
+        <p class="text-gray-500 uppercase text-xs mb-2">Music</p>
+        <ul class="space-y-3.5 transition-all duration-75">
+          <li><a href="index.html" class="flex items-center gap-2 text-gray-300 hover:text-purple-400 group"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6"><path stroke-linecap="round" stroke-linejoin="round" d="m9 9 10.5-3m0 6.553v3.75a2.25 2.25 0 0 1-1.632 2.163l-1.32.377a1.803 1.803 0 1 1-.99-3.467l2.31-.66a2.25 2.25 0 0 0 1.632-2.163Zm0 0V2.25L9 5.25v10.303m0 0v3.75a2.25 2.25 0 0 1-1.632 2.163l-1.32.377a1.803 1.803 0 0 1-.99-3.467l2.31-.66A2.25 2.25 0 0 0 9 15.553Z" /></svg> Home</a></li>
+
+          <li><a href="trending.html" class="flex items-center gap-2 text-gray-300 hover:text-purple-400 group"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6"><path stroke-linecap="round" stroke-linejoin="round" d="M15.362 5.214A8.252 8.252 0 0 1 12 21 8.25 8.25 0 0 1 6.038 7.047 8.287 8.287 0 0 0 9 9.601a8.983 8.983 0 0 1 3.361-6.867 8.21 8.21 0 0 0 3 2.48Z" /><path stroke-linecap="round" stroke-linejoin="round" d="M12 18a3.75 3.75 0 0 0 .495-7.468 5.99 5.99 0 0 0-1.925 3.547 5.975 5.975 0 0 1-2.133-1.001A3.75 3.75 0 0 0 12 18Z" /></svg> Trending</a></li>
+
+          <li><a href="new-songs.html" class="flex items-center gap-2 text-gray-300 hover:text-purple-400 group"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6"><path stroke-linecap="round" stroke-linejoin="round" d="M12 7.5h1.5m-1.5 3h1.5m-7.5 3h7.5m-7.5 3h7.5m3-9h3.375c.621 0 1.125.504 1.125 1.125V18a2.25 2.25 0 0 1-2.25 2.25M16.5 7.5V18a2.25 2.25 0 0 0 2.25 2.25M16.5 7.5V4.875c0-.621-.504-1.125-1.125-1.125H4.125C3.504 3.75 3 4.254 3 4.875V18a2.25 2.25 0 0 0 2.25 2.25h13.5M6 7.5h3v3H6v-3Z" /></svg> New</a></li>
+
+          <li><a href="artists.html" class="flex items-center gap-2 text-gray-300 hover:text-purple-400 group"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6"><path stroke-linecap="round" stroke-linejoin="round" d="M12 18.75a6 6 0 0 0 6-6v-1.5m-6 7.5a6 6 0 0 1-6-6v-1.5m6 7.5v3.75m-3.75 0h7.5M12 15.75a3 3 0 0 1-3-3V4.5a3 3 0 1 1 6 0v8.25a3 3 0 0 1-3 3Z" /></svg> Artists</a></li>
+
+          <li><a href="trending.html" class="flex items-center gap-2 text-gray-300 hover:text-purple-400 group"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6"><path stroke-linecap="round" stroke-linejoin="round" d="m15.75 10.5 4.72-4.72a.75.75 0 0 1 1.28.53v11.38a.75.75 0 0 1-1.28.53l-4.72-4.72M4.5 18.75h9a2.25 2.25 0 0 0 2.25-2.25v-9a2.25 2.25 0 0 0-2.25-2.25h-9A2.25 2.25 0 0 0 2.25 7.5v9a2.25 2.25 0 0 0 2.25 2.25Z" /></svg> Videos</a></li>
+
+          <li><a href="playlist.html" class="flex items-center gap-2 text-gray-300 hover:text-purple-400 group"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6"><path stroke-linecap="round" stroke-linejoin="round" d="M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z" /><path stroke-linecap="round" stroke-linejoin="round" d="M15.91 11.672a.375.375 0 0 1 0 .656l-5.603 3.113a.375.375 0 0 1-.557-.328V8.887c0-.286.307-.466.557-.327l5.603 3.112Z" /></svg> Playlists</a></li>
+
+          <li><a href="posts.html" class="flex items-center gap-2 text-gray-300 hover:text-purple-400 group"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6"><path stroke-linecap="round" stroke-linejoin="round" d="M3.75 12h16.5m-16.5 3.75h16.5M3.75 19.5h16.5M5.625 4.5h12.75a1.875 1.875 0 0 1 0 3.75H5.625a1.875 1.875 0 0 1 0-3.75Z" /></svg> Posts</a></li>
+
+          <li><a href="genres.html" class="flex items-center gap-2 text-gray-300 hover:text-purple-400 group"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6"><path stroke-linecap="round" stroke-linejoin="round" d="M16.712 4.33a9.027 9.027 0 0 1 1.652 1.306c.51.51.944 1.064 1.306 1.652M16.712 4.33l-3.448 4.138m3.448-4.138a9.014 9.014 0 0 0-9.424 0M19.67 7.288l-4.138 3.448m4.138-3.448a9.014 9.014 0 0 1 0 9.424m-4.138-5.976a3.736 3.736 0 0 0-.88-1.388 3.737 3.737 0 0 0-1.388-.88m2.268 2.268a3.765 3.765 0 0 1 0 2.528m-2.268-4.796a3.765 3.765 0 0 0-2.528 0m4.796 4.796c-.181.506-.475.982-.88 1.388a3.736 3.736 0 0 1-1.388.88m2.268-2.268 4.138 3.448m0 0a9.027 9.027 0 0 1-1.306 1.652c-.51.51-1.064.944-1.652 1.306m0 0-3.448-4.138m3.448 4.138a9.014 9.014 0 0 1-9.424 0m5.976-4.138a3.765 3.765 0 0 1-2.528 0m0 0a3.736 3.736 0 0 1-1.388-.88 3.737 3.737 0 0 1-.88-1.388m2.268 2.268L7.288 19.67m0 0a9.024 9.024 0 0 1-1.652-1.306 9.027 9.027 0 0 1-1.306-1.652m0 0 4.138-3.448M4.33 16.712a9.014 9.014 0 0 1 0-9.424m4.138 5.976a3.765 3.765 0 0 1 0-2.528m0 0c.181-.506.475-.982.88-1.388a3.736 3.736 0 0 1 1.388-.88m-2.268 2.268L4.33 7.288m6.406 1.18L7.288 4.33m0 0a9.024 9.024 0 0 0-1.652 1.306A9.025 9.025 0 0 0 4.33 7.288" /></svg> Genres</a></li>
+        </ul>
+      </div>
+
+      <div>
+        <p class="text-gray-500 uppercase text-xs mb-2">Library</p>
+        <ul class="space-y-3 transition-all duration-75">
+          <li class="flex items-center gap-2 text-gray-300 hover:text-purple-400 group"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6"><path stroke-linecap="round" stroke-linejoin="round" d="M12 4.5v15m7.5-7.5h-15" /></svg> Add Playlist</li>
+        </ul>
+      </div>
+
+    </div>
+  </aside>
+
+  <!-- Main -->
+  <main class="px-2 md:p-4 md:ml-64 h-auto pt-16 md:pt-20 mb-20">
+    <!-- Trending songs -->
+
+    <section class="max-w-xl mx-auto space-y-3">
+      <div class="col-span-1 md:col-span-2 relative bg-gradient-to-r from-sky-100 to-purple-300 rounded-xl p-6 overflow-hidden">
+        <div class="block text-black truncate">
+          <h2 class="text-lg md:text-3xl font-semibold">A Day To Remember</h2>
+          <p class="mt-1 text-sm">30th december, 2025 concert</p>
+          <p class="mt-.5 text-sm text-gray-500">Starking, Ozagain, B1</p>
+        </div>
+        <img src="static/01.webp" class="absolute right-0 top-0 h-full object-cover opacity-75 rounded-r-xl" alt="Jux"/>
+      </div>
+
+      <div class="p-4 bg-gray-800 shadow rounded-lg space-y-2">
+        <div class="flex items-center space-x-3 mb-2">
+          <img src="static/avatar.webp" alt="username" class="size-8 rounded-full">
+          <div>
+            <span class="text-sm font-semibold">Derkos</span>
+            <span class="text-sm text-gray-400">Jan 30, 2025</span>
+          </div>
+        </div>
+
+        <div>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+        tempor ut labore et dolore magna aliqua ut aliquip ex
+        consequat...</div>
+
+        <div>
+          <a href="detail.html">
+            <img src="static/cover.webp" alt="image" class="w-full rounded-lg">
+          </a>
+        </div>
+
+        <div class="space-x-2 text-gray-400 text-sm">
+          <span>3k likes</span>,
+          <span>500 comments</span>,
+          <span>Repost from Derkos</span>
+        </div>
+
+        <hr>
+
+        <div class="flex justify-between text-gray-400">
+          <a href="#"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6"><path stroke-linecap="round" stroke-linejoin="round" d="M21 8.25c0-2.485-2.099-4.5-4.688-4.5-1.935 0-3.597 1.126-4.312 2.733-.715-1.607-2.377-2.733-4.313-2.733C5.1 3.75 3 5.765 3 8.25c0 7.22 9 12 9 12s9-4.78 9-12Z" /></svg></a>
+
+          <a href="#"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6"><path stroke-linecap="round" stroke-linejoin="round" d="M2.25 12.76c0 1.6 1.123 2.994 2.707 3.227 1.068.157 2.148.279 3.238.364.466.037.893.281 1.153.671L12 21l2.652-3.978c.26-.39.687-.634 1.153-.67 1.09-.086 2.17-.208 3.238-.365 1.584-.233 2.707-1.626 2.707-3.228V6.741c0-1.602-1.123-2.995-2.707-3.228A48.394 48.394 0 0 0 12 3c-2.392 0-4.744.175-7.043.513C3.373 3.746 2.25 5.14 2.25 6.741v6.018Z" /></svg></a>
+
+          <a href="#"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6"><path stroke-linecap="round" stroke-linejoin="round" d="M7.217 10.907a2.25 2.25 0 1 0 0 2.186m0-2.186c.18.324.283.696.283 1.093s-.103.77-.283 1.093m0-2.186 9.566-5.314m-9.566 7.5 9.566 5.314m0 0a2.25 2.25 0 1 0 3.935 2.186 2.25 2.25 0 0 0-3.935-2.186Zm0-12.814a2.25 2.25 0 1 0 3.933-2.185 2.25 2.25 0 0 0-3.933 2.185Z" /></svg></a>
+
+          <a href="#"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6"><path stroke-linecap="round" stroke-linejoin="round" d="M17.593 3.322c1.1.128 1.907 1.077 1.907 2.185V21L12 17.25 4.5 21V5.507c0-1.108.806-2.057 1.907-2.185a48.507 48.507 0 0 1 11.186 0Z" /></svg></a>
+        </div>
+      </div>
+
+      <div class="p-4 bg-gray-800 shadow rounded-lg space-y-2">
+        <div class="flex items-center space-x-3 mb-2">
+          <img src="static/avatar.webp" alt="username" class="size-8 rounded-full">
+          <div>
+            <span class="text-sm font-semibold">Derkos</span>
+            <span class="text-sm text-gray-400">Jan 30, 2025</span>
+          </div>
+        </div>
+
+        <div>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+        tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+        quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+        consequat...</div>
+
+        <div class="space-x-2 text-gray-400 text-sm">
+          <span>3k likes</span>,
+          <span>500 comments</span>,
+          <span>Repost from Derkos</span>
+        </div>
+
+        <hr>
+
+        <div class="flex justify-between text-gray-400">
+          <a href="#"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6"><path stroke-linecap="round" stroke-linejoin="round" d="M21 8.25c0-2.485-2.099-4.5-4.688-4.5-1.935 0-3.597 1.126-4.312 2.733-.715-1.607-2.377-2.733-4.313-2.733C5.1 3.75 3 5.765 3 8.25c0 7.22 9 12 9 12s9-4.78 9-12Z" /></svg></a>
+
+          <a href="#"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6"><path stroke-linecap="round" stroke-linejoin="round" d="M2.25 12.76c0 1.6 1.123 2.994 2.707 3.227 1.068.157 2.148.279 3.238.364.466.037.893.281 1.153.671L12 21l2.652-3.978c.26-.39.687-.634 1.153-.67 1.09-.086 2.17-.208 3.238-.365 1.584-.233 2.707-1.626 2.707-3.228V6.741c0-1.602-1.123-2.995-2.707-3.228A48.394 48.394 0 0 0 12 3c-2.392 0-4.744.175-7.043.513C3.373 3.746 2.25 5.14 2.25 6.741v6.018Z" /></svg></a>
+
+          <a href="#"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6"><path stroke-linecap="round" stroke-linejoin="round" d="M7.217 10.907a2.25 2.25 0 1 0 0 2.186m0-2.186c.18.324.283.696.283 1.093s-.103.77-.283 1.093m0-2.186 9.566-5.314m-9.566 7.5 9.566 5.314m0 0a2.25 2.25 0 1 0 3.935 2.186 2.25 2.25 0 0 0-3.935-2.186Zm0-12.814a2.25 2.25 0 1 0 3.933-2.185 2.25 2.25 0 0 0-3.933 2.185Z" /></svg></a>
+
+          <a href="#"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6"><path stroke-linecap="round" stroke-linejoin="round" d="M17.593 3.322c1.1.128 1.907 1.077 1.907 2.185V21L12 17.25 4.5 21V5.507c0-1.108.806-2.057 1.907-2.185a48.507 48.507 0 0 1 11.186 0Z" /></svg></a>
+        </div>
+      </div>
+
+      <div class="p-4 bg-gray-800 shadow rounded-lg space-y-2">
+        <div class="flex items-center space-x-3 mb-2">
+          <img src="static/avatar.webp" alt="username" class="size-8 rounded-full">
+          <div>
+            <span class="text-sm font-semibold">Derkos</span>
+            <span class="text-sm text-gray-400">Jan 30, 2025</span>
+          </div>
+        </div>
+
+        <div>Lorem ipsum dolor sit amet sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat...</div>
+
+        <div>
+          <a href="detail.html">
+            <img src="static/02.webp" alt="image" class="w-full rounded-lg">
+          </a>
+        </div>
+
+        <div class="space-x-2 text-gray-400 text-sm">
+          <span>3k likes</span>,
+          <span>500 comments</span>,
+          <span>Repost from Derkos</span>
+        </div>
+
+        <hr>
+
+        <div class="flex justify-between text-gray-400">
+          <a href="#"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6"><path stroke-linecap="round" stroke-linejoin="round" d="M21 8.25c0-2.485-2.099-4.5-4.688-4.5-1.935 0-3.597 1.126-4.312 2.733-.715-1.607-2.377-2.733-4.313-2.733C5.1 3.75 3 5.765 3 8.25c0 7.22 9 12 9 12s9-4.78 9-12Z" /></svg></a>
+
+          <a href="#"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6"><path stroke-linecap="round" stroke-linejoin="round" d="M2.25 12.76c0 1.6 1.123 2.994 2.707 3.227 1.068.157 2.148.279 3.238.364.466.037.893.281 1.153.671L12 21l2.652-3.978c.26-.39.687-.634 1.153-.67 1.09-.086 2.17-.208 3.238-.365 1.584-.233 2.707-1.626 2.707-3.228V6.741c0-1.602-1.123-2.995-2.707-3.228A48.394 48.394 0 0 0 12 3c-2.392 0-4.744.175-7.043.513C3.373 3.746 2.25 5.14 2.25 6.741v6.018Z" /></svg></a>
+
+          <a href="#"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6"><path stroke-linecap="round" stroke-linejoin="round" d="M7.217 10.907a2.25 2.25 0 1 0 0 2.186m0-2.186c.18.324.283.696.283 1.093s-.103.77-.283 1.093m0-2.186 9.566-5.314m-9.566 7.5 9.566 5.314m0 0a2.25 2.25 0 1 0 3.935 2.186 2.25 2.25 0 0 0-3.935-2.186Zm0-12.814a2.25 2.25 0 1 0 3.933-2.185 2.25 2.25 0 0 0-3.933 2.185Z" /></svg></a>
+
+          <a href="#"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6"><path stroke-linecap="round" stroke-linejoin="round" d="M17.593 3.322c1.1.128 1.907 1.077 1.907 2.185V21L12 17.25 4.5 21V5.507c0-1.108.806-2.057 1.907-2.185a48.507 48.507 0 0 1 11.186 0Z" /></svg></a>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+
+  <script>
+    document.getElementById('scroll-left').addEventListener('click', () => {
+      document.getElementById('stories-container').scrollBy({
+        left: -200, // Adjust scrolling distance
+        behavior: 'smooth'
+      });
+    });
+
+    document.getElementById('scroll-right').addEventListener('click', () => {
+      document.getElementById('stories-container').scrollBy({
+        left: 200, // Adjust scrolling distance
+        behavior: 'smooth'
+      });
+    });
+  </script>
+  <script src="https://cdn.jsdelivr.net/npm/flowbite@3.1.2/dist/flowbite.min.js"></script>
+
+
+  <!-- GLightbox Script -->
+  <script src="https://cdn.jsdelivr.net/gh/mcstudios/glightbox/dist/js/glightbox.min.js"></script>
+
+  <script>
+    // Initialize GLightbox
+    const lightbox = GLightbox({
+      selector: '.glightbox',
+      touchNavigation: true,
+      loop: true,
+      autoplayVideos: true,
+      zoomable: true,
+      plyr: {
+        config: {
+          controls: ['play-large', 'play', 'progress', 'current-time', 'mute', 'volume', 'fullscreen'],
+          hideControls: false
+        }
+      }
+    });
+  </script>
+
+</body>
+</html>
